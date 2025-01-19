@@ -1,0 +1,29 @@
+- name: Remove existing volume from existing storage group
+  dellemc.powermax.storagegroup:
+    unispherehost: "{{ unispherehost }}"
+    universion: "{{ universion }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    serial_no: "{{ serial_no }}"
+    sg_name: "{{ sg_name }}"
+    state: "present"
+    volumes:
+      - vol_id: "{{ result.volume_details.volumeId }}"
+    vol_state: "absent-in-group"  # Ensure the volume is removed from the storage group
+
+- name: Delete volume
+  dellemc.powermax.volume:
+    unispherehost: "{{ unispherehost }}"
+    universion: "{{ universion }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    serial_no: "{{ serial_no }}"
+    vol_id: "{{ result.volume_details.volumeId }}"
+    state: "absent"
+  register: delete_result
+
+- name: Debug the result of the volume deletion
+  ansible.builtin.debug:
+    msg: "Volume deletion result: {{ delete_result }}"

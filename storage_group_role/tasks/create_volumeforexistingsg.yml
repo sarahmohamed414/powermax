@@ -1,0 +1,16 @@
+- name: Create new volumes for existing Storage Group
+  dellemc.powermax.storagegroup:
+    unispherehost: "{{ unispherehost }}"
+    universion: "{{ universion }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    serial_no: "{{ serial_no }}"
+    sg_name: "{{ sg_name }}"
+    state: "present"
+    volumes:
+      - vol_name: "{{ user_volume_name }}"
+        size: 1
+        cap_unit: "GB"
+    vol_state: "present-in-group"
+  register: sg_result

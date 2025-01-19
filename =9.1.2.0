@@ -1,0 +1,17 @@
+Requirement already satisfied: PyU4V in /root/pyu4v_env/lib/python3.12/site-packages (10.0.0.16)
+Collecting PyU4V
+  Using cached pyu4v-10.2.0.2-py3-none-any.whl
+Requirement already satisfied: requests in /root/pyu4v_env/lib/python3.12/site-packages (from PyU4V) (2.32.3)
+Requirement already satisfied: six in /root/pyu4v_env/lib/python3.12/site-packages (from PyU4V) (1.17.0)
+Requirement already satisfied: urllib3 in /root/pyu4v_env/lib/python3.12/site-packages (from PyU4V) (2.3.0)
+Requirement already satisfied: prettytable in /root/pyu4v_env/lib/python3.12/site-packages (from PyU4V) (3.12.0)
+Requirement already satisfied: wcwidth in /root/pyu4v_env/lib/python3.12/site-packages (from prettytable->PyU4V) (0.2.13)
+Requirement already satisfied: charset-normalizer<4,>=2 in /root/pyu4v_env/lib/python3.12/site-packages (from requests->PyU4V) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /root/pyu4v_env/lib/python3.12/site-packages (from requests->PyU4V) (3.10)
+Requirement already satisfied: certifi>=2017.4.17 in /root/pyu4v_env/lib/python3.12/site-packages (from requests->PyU4V) (2024.12.14)
+Installing collected packages: PyU4V
+  Attempting uninstall: PyU4V
+    Found existing installation: PyU4V 10.0.0.16
+    Uninstalling PyU4V-10.0.0.16:
+      Successfully uninstalled PyU4V-10.0.0.16
+Successfully installed PyU4V-10.2.0.2

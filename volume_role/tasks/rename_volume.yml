@@ -1,0 +1,17 @@
+- name: Rename volume
+  dellemc.powermax.volume:
+    unispherehost: "{{ unispherehost }}"
+    universion: "{{ universion }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    serial_no: "{{ serial_no }}"
+    new_name: "sarah_renamed4"  # Desired new volume name and i will make a prompt for the user to ask for the new name
+    vol_id: "{{ result.volume_details.volumeId }}"  # Ensure the correct volumeId is passed
+    state: "present"  # Ensures the volume is in the "present" state, effectively renaming it
+
+  register: rename_result
+
+- name: Debug the renamed volume details
+  ansible.builtin.debug:
+    msg: "Renamed volume details: {{ rename_result }}"

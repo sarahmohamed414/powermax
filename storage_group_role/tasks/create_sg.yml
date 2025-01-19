@@ -1,0 +1,18 @@
+- name: Create a new Storage group
+  dellemc.powermax.storagegroup:
+    unispherehost: "{{ unispherehost }}"
+    universion: "{{ universion }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    serial_no: "{{ serial_no }}"
+    sg_name: "{{ sg_name_tocreate }}"
+    service_level: "Diamond"
+    srp: "SRP_1"
+    compression: true
+    state: "present"
+  register: sg_result
+
+- name: Show the result of Storage group creation
+  ansible.builtin.debug:
+    var: sg_result

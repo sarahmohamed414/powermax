@@ -1,0 +1,9 @@
+---
+- name: Include create volume task
+  ansible.builtin.include_tasks: create_volume.yml
+- name: Include Get volume details
+  ansible.builtin.include_tasks: get_volume.yml
+- name: Include Rename volume
+  ansible.builtin.include_tasks: rename_volume.yml
+- name: Include Delete volume
+  ansible.builtin.include_tasks: delete_volume.yml

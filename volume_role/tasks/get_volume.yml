@@ -1,0 +1,15 @@
+- name: Get volume details
+  dellemc.powermax.volume:
+    unispherehost: "{{ unispherehost }}"
+    universion: "{{ universion }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    serial_no: "{{ serial_no }}"
+    vol_id: "{{ result.volume_details.volumeId }}"  # Ensure this is the correct path to volume ID
+    state: "present"
+  register: volume_info
+
+- name: Show the result of get info
+  ansible.builtin.debug:
+    var: volume_info

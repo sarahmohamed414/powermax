@@ -1,0 +1,20 @@
+# tasks/create_volume.yml
+- name: Create volume
+  dellemc.powermax.volume:
+    unispherehost: "{{ unispherehost }}"
+    universion: "{{ universion }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    serial_no: "{{ serial_no }}"
+    vol_name: "{{ vol_name }}"
+    sg_name: "{{ sg_name }}"
+    size: "{{ vol_size }}"
+    cap_unit: "{{ cap_unit }}"
+    append_vol_id: "{{ append_vol_id }}"
+    state: 'present'
+  register: result
+
+- name: Show the result of volume creation
+  ansible.builtin.debug:
+    var: result

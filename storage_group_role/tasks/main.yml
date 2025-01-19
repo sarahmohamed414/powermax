@@ -1,0 +1,7 @@
+---
+- name: Include Create a new Storage group
+  ansible.builtin.include_tasks: create_sg.yml
+  when: user_input == "1"
+- name: Include Create new volumes for existing Storage Group
+  ansible.builtin.include_tasks: create_volumeforexistingsg.yml
+  when: user_input == "2"
