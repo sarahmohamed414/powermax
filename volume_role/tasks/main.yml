@@ -1,9 +1,24 @@
 ---
+- name: Load variables based on action
+  ansible.builtin.include_vars:
+    file: "volume_role/vars/{{
+        'create_volume.yml' if user_input == '1' else
+        'rename_volume.yml' if user_input == '2' else
+        'delete_volume.yml'
+    }}"
+
+- name: Debug loaded variables
+  ansible.builtin.debug:
+    var: vars
+
 - name: Include create volume task
   ansible.builtin.include_tasks: create_volume.yml
-- name: Include Get volume details
-  ansible.builtin.include_tasks: get_volume.yml
+  when: user_input == "1"
+
 - name: Include Rename volume
   ansible.builtin.include_tasks: rename_volume.yml
+  when: user_input == "2"
+
 - name: Include Delete volume
   ansible.builtin.include_tasks: delete_volume.yml
+  when: user_input == "3"

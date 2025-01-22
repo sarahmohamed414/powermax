@@ -1,2 +1,6 @@
 ---
-# vars file for volume_role
+# Include additional variable files
+include_vars:
+  - create_volume.yml
+  - delete_volume.yml
+  - rename_volume.yml

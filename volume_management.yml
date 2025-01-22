@@ -1,0 +1,26 @@
+---
+- name: Volume operations on VMAX
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true
+  roles:
+    - role: volume_role
+
+  vars:
+    unispherehost: "10.118.128.103"
+    verifycert: false
+    serial_no: '000297901660'
+    ansible_python_interpreter: /root/pyu4v_env/bin/python3
+    universion: 92
+
+  vars_prompt:
+    - name: user_input
+      prompt: |
+        Please select an action:
+        1. Create a volume
+        2. Rename volume
+        3. Delete volume
+      private: false
+  vars_files:
+    - vault.yml

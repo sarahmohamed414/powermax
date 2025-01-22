@@ -1,0 +1,27 @@
+---
+- name: Storage operations on VMAX
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true
+  roles:
+    - storage_group_role
+
+  vars:
+    unispherehost: "10.118.128.103"  # IP address of the PowerMax system
+    verifycert: false
+    serial_no: '000297901660'
+    ansible_python_interpreter: /root/pyu4v_env/bin/python3
+    universion: 92
+    append_vol_id: true
+  vars_prompt:
+    - name: user_input
+      prompt: |
+        Please select an action:
+        1. Create a storage group
+        2. Create new volumes then add them to an existing Storage Group
+        3. Add existing volumes to existing Storage Group
+        4. List volumes of a Storage Group
+      private: false
+  vars_files:
+    - vault.yml

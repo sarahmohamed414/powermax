@@ -1,0 +1,2 @@
+vol_id: "00068"  # Enter the volume ID to delete
+sg_name: "Edward_LNK_SG_001"  # Enter the storage group name that has the volume

@@ -1,7 +1,29 @@
 ---
+- name: Load variables based on action
+  ansible.builtin.include_vars:
+    file: "storage_group_role/vars/{{
+        'create_sg.yml' if user_input == '1' else
+        'create_volumes_for_sg.yml' if user_input == '2' else
+        'add_volumes_to_sg.yml' if user_input == '3' else
+        'list_volumes.yml'
+    }}"
+
+- name: Debug loaded variables
+  ansible.builtin.debug:
+    var: vars
+
 - name: Include Create a new Storage group
   ansible.builtin.include_tasks: create_sg.yml
   when: user_input == "1"
+
 - name: Include Create new volumes for existing Storage Group
-  ansible.builtin.include_tasks: create_volumeforexistingsg.yml
+  ansible.builtin.include_tasks: create_volumes_for_sg.yml
   when: user_input == "2"
+
+- name: Include Add existing volumes to existing Storage Group
+  ansible.builtin.include_tasks: add_volumes_to_sg.yml
+  when: user_input == "3"
+
+- name: Include List volumes of a Storage Group
+  ansible.builtin.include_tasks: list_volumes.yml
+  when: user_input == "4"

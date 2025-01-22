@@ -6,9 +6,9 @@
     user: "{{ user }}"
     password: "{{ password }}"
     serial_no: "{{ serial_no }}"
-    sg_name: "{{ sg_name_tocreate }}"
-    service_level: "Diamond"
-    srp: "SRP_1"
+    sg_name: "{{ sg_name }}"
+    service_level: "{{ service_level }}"
+    srp: "{{ srp }}"
     compression: true
     state: "present"
   register: sg_result

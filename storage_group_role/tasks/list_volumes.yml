@@ -1,15 +1,11 @@
-- name: Create volume
-  register: result
-  dellemc.powermax.volume:
+- name: List volumes of a Storage Group
+  dellemc.powermax.storagegroup:
     unispherehost: "{{ unispherehost }}"
     universion: "{{ universion }}"
     verifycert: "{{ verifycert }}"
     user: "{{ user }}"
     password: "{{ password }}"
     serial_no: "{{ serial_no }}"
-    vol_name: "{{ vol_name }}"
     sg_name: "{{ sg_name }}"
-    size: "{{ volume_size }}"
-    cap_unit: "{{ cap_unit }}"
-    append_vol_id: "{{ append_vol_id }}"
-    state: 'present'
+    state: "present"
+  register: sg_result

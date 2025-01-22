@@ -9,8 +9,7 @@
     sg_name: "{{ sg_name }}"
     state: "present"
     volumes:
-      - vol_name: "{{ user_volume_name }}"
-        size: 1
-        cap_unit: "GB"
+      - vol_name: "{{ vol_name }}"
+        size: " {{ size }}"
     vol_state: "present-in-group"
   register: sg_result

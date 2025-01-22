@@ -1,0 +1,6 @@
+# vars/create_volume.yml
+vol_name: "sara_g"
+volume_size: 1
+sg_name: "Edward_LNK_SG_001"
+cap_unit: 'GB'
+append_vol_id: true
