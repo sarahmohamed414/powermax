@@ -15,55 +15,28 @@ Python 3.10, 3.11 or 3.12.
 Parameters
 --------------
 
-vol_name (optional, str, None)
-The name of the volume.
-sg_name (optional, str, None)
-The name of the storage group.
-new_sg_name (optional, str, None)
-The name of the target storage group.
-vol_id (optional, str, None)
-The native id of the volume.
+## Parameters
 
-Required for rename and delete volume operations.
-
-size (optional, float, None)
-The new size of existing volume.
-
-Required for create and expand volume operations.
-
-cap_unit (optional, str, None)
-volume capacity units.
-
-If not specified, default value is GB.
-
-new_name (optional, str, None)
-The new volume identifier for the volume.
-vol_wwn (optional, str, None)
-The WWN of the volume.
-append_vol_id (optional, bool, None)
-Appends volume id to the volume name, Applicable from V4 (Juniper).
-state (True, str, None)
-Defines whether the volume should exist or not.
-unispherehost (True, str, None)
-IP or FQDN of the Unisphere host
-universion (False, int, None)
-Unisphere version. This parameter has been deprecated. It is no longer necessary to specify this parameter.
-verifycert (True, str, None)
-Specifies system whether to validate SSL certificate or not, Values can be True or False or a custom file path for SSL certificate with .pem extension or .cer with base 64 encoding.
-user (True, str, None)
-The username of the Unisphere host.
-password (True, str, None)
-The password of the Unisphere host.
-timeout (optional, int, 120)
-Time after which the connection will get terminated.
-
-It is to be mentioned in seconds.
-
-port (optional, int, 8443)
-The port of the Unisphere host.
-serial_no (True, str, None)
-The serial number of the PowerMax/VMAX array. It is a required parameter for all array-specific operations except for getting a list of arrays in the Gatherfacts module.
-
+| Parameter       | Required | Type    | Default | Description |
+|----------------|----------|---------|---------|-------------|
+| `vol_name`     | No       | string  | `None`  | The name of the volume. |
+| `sg_name`      | No       | string  | `None`  | The name of the storage group. |
+| `new_sg_name`  | No       | string  | `None`  | The name of the target storage group. |
+| `vol_id`       | No       | string  | `None`  | The native ID of the volume. **Required for rename and delete volume operations.** |
+| `size`         | No       | float   | `None`  | The new size of an existing volume. **Required for create and expand volume operations.** |
+| `cap_unit`     | No       | string  | `GB`    | Volume capacity units. Default is `GB`. |
+| `new_name`     | No       | string  | `None`  | The new volume identifier for the volume. |
+| `vol_wwn`      | No       | string  | `None`  | The WWN of the volume. |
+| `append_vol_id`| No       | boolean | `None`  | Appends volume ID to the volume name. Applicable from V4 (Juniper). |
+| `state`        | Yes      | string  | `None`  | Defines whether the volume should exist or not. |
+| `unispherehost`| Yes      | string  | `None`  | IP or FQDN of the Unisphere host. |
+| `universion`   | No       | int     | `None`  | Unisphere version. **Deprecated.** No longer necessary to specify. |
+| `verifycert`   | Yes      | string  | `None`  | Specifies whether to validate SSL certificates. Accepts `True`, `False`, or a file path (`.pem` or `.cer`). |
+| `user`         | Yes      | string  | `None`  | The username of the Unisphere host. |
+| `password`     | Yes      | string  | `None`  | The password of the Unisphere host. |
+| `timeout`      | No       | int     | `120`   | Time (in seconds) after which the connection will terminate. |
+| `port`         | No       | int     | `8443`  | The port of the Unisphere host. |
+| `serial_no`    | Yes      | string  | `None`  | The serial number of the PowerMax/VMAX array. **Required for all array-specific operations except listing arrays.** |
 
 Notes
 ------------
