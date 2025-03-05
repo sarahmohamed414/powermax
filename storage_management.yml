@@ -22,6 +22,8 @@
         2. Create new volumes then add them to an existing Storage Group
         3. Add existing volumes to existing Storage Group
         4. List volumes of a Storage Group
+        5. Modify Storage Group
+        6. Delete Storage Group
       private: false
   vars_files:
     - vault.yml

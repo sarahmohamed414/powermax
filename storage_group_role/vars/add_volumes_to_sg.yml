@@ -1,2 +1,2 @@
 sg_name: "Edward_LNK_SG_001" # Enter the name of the storage group to which existing volumes will be added.
-vol_id: "0002B" # Enter the ID of the existing volume to be added to the storage group.
+vol_id: "0005E" # Enter the ID of the existing volume to be added to the storage group.

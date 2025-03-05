@@ -1,17 +1,25 @@
 - name: Rename volume
-  dellemc.powermax.volume:
-    unispherehost: "{{ unispherehost }}"
-    universion: "{{ universion }}"
-    verifycert: "{{ verifycert }}"
-    user: "{{ user }}"
-    password: "{{ password }}"
-    serial_no: "{{ serial_no }}"
-    new_name: "{{ new_name }}"  # Desired new volume name
-    vol_id: "{{ vol_id }}"
-    state: "present"  # Ensures the volume is in the "present" state, effectively renaming it
+  block:
+    - name: Rename volume
+      dellemc.powermax.volume:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        new_name: "{{ new_name }}"  # Desired new volume name
+        vol_id: "{{ vol_id }}"
+        state: "present"  # Ensures the volume is in the "present" state, effectively renaming it
+      register: rename_result
+      changed_when: rename_result is not failed
 
-  register: rename_result
+  rescue:
+    - name: Handle rename failure
+      ansible.builtin.debug:
+        msg: "Failed to rename volume {{ vol_id }} to {{ new_name }}. Please ensure that volume {{ vol_id }} exists and check logs for details."
 
-- name: Debug the renamed volume details
-  ansible.builtin.debug:
-    msg: "Renamed volume details: {{ rename_result }}"
+  always:
+    - name: Debug the renamed volume details
+      ansible.builtin.debug:
+        msg: "{{ 'Volume with {{ vol_id }} renamed successfully to ' ~ new_name if rename_result is not failed else ' Volume rename operation failed' }}"

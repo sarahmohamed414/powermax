@@ -1,3 +1,7 @@
-# SPDX-License-Identifier: MIT-0
----
-# handlers file for storage_group_role
+- name: Storage_group_deleted
+  ansible.builtin.debug:
+    msg: "The Storage Group '{{ sg_name }}' has been successfully deleted."
+
+- name: Storage_group_deletion_failed
+  ansible.builtin.debug:
+    msg: "Failed to delete Storage Group '{{ sg_name }}'. Ensure that the Storage Group exists and check logs for details."

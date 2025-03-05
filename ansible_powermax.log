@@ -1369,3 +1369,891 @@
 2025-01-22 16:28:10,960 volume.py INFO : Getting volume 00027 details using native id
 2025-01-22 16:28:11,176 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f5382e710a0>
 2025-01-22 16:28:11,178 volume.py INFO : Connection closed successfully
+2025-01-30 13:54:00,255 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 13:54:02,845 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 13:54:02,845 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 13:54:02,845 storagegroup.py INFO : Getting details of storage group sa
+2025-01-30 13:54:03,429 storagegroup.py INFO : The storage group True needs to be modified and the modified param are {'modified_slo': 'Platinum', 'modified_compression': False} 
+2025-01-30 13:54:03,429 storagegroup.py INFO : Get volumes details of storage group sa
+2025-01-30 13:54:03,429 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-01-30 13:54:03,713 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:54:04,016 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-01-30 13:54:04,299 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:54:04,299 storagegroup.py INFO : Modifying storage group sa
+2025-01-30 13:54:04,300 storagegroup.py INFO : Getting details of storage group sa
+2025-01-30 13:54:04,561 storagegroup.py INFO : Modifying the SG SLO to Platinum 
+2025-01-30 13:54:04,561 storagegroup.py INFO : The existing SG SLO is Diamond and the desired SG SLO is Platinum 
+2025-01-30 13:54:09,091 storagegroup.py INFO : Getting details of storage group sa
+2025-01-30 13:54:09,379 storagegroup.py INFO : The existing SG compression is True and the desired SG compression is False 
+2025-01-30 13:54:13,853 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-01-30 13:54:14,122 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:54:14,489 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-01-30 13:54:14,751 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:54:14,751 storagegroup.py INFO : Found storage group {'storageGroupId': 'sa', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 7.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-01-30 13:54:14,751 storagegroup.py INFO : Getting details of storage group sa
+2025-01-30 13:54:15,296 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fdf53d57200>
+2025-01-30 13:54:15,298 storagegroup.py INFO : Connection closed successfully
+2025-01-30 13:55:09,044 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 13:55:10,461 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 13:55:10,461 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 13:55:10,462 storagegroup.py INFO : Getting details of storage group sa
+2025-01-30 13:55:11,178 storagegroup.py INFO : The storage group True needs to be modified and the modified param are {'modified_slo': 'silver'} 
+2025-01-30 13:55:11,178 storagegroup.py INFO : Get volumes details of storage group sa
+2025-01-30 13:55:11,178 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-01-30 13:55:11,531 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:55:11,968 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-01-30 13:55:12,322 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:55:12,323 storagegroup.py INFO : Modifying storage group sa
+2025-01-30 13:55:12,323 storagegroup.py INFO : Getting details of storage group sa
+2025-01-30 13:55:12,679 storagegroup.py INFO : Modifying the SG SLO to silver 
+2025-01-30 13:55:12,679 storagegroup.py INFO : The existing SG SLO is Platinum and the desired SG SLO is silver 
+2025-01-30 13:55:17,234 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-01-30 13:55:17,589 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:55:18,053 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-01-30 13:55:18,406 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-01-30 13:55:18,407 storagegroup.py INFO : Found storage group {'storageGroupId': 'sa', 'slo': 'Platinum', 'service_level': 'Platinum', 'base_slo_name': 'Platinum', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 7.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': False, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-01-30 13:55:18,407 storagegroup.py INFO : Getting details of storage group sa
+2025-01-30 13:55:19,114 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f19f2539c70>
+2025-01-30 13:55:19,116 storagegroup.py INFO : Connection closed successfully
+2025-01-30 14:09:34,291 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 14:09:37,319 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 14:09:37,319 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 14:09:37,319 storagegroup.py INFO : Getting details of storage group TEST-06
+2025-01-30 14:09:38,028 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-01-30 14:09:38,028 storagegroup.py INFO : Delete storage group TEST-06 
+2025-01-30 14:09:41,207 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fa5c3c21df0>
+2025-01-30 14:09:41,208 storagegroup.py INFO : Connection closed successfully
+2025-01-30 14:10:20,617 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 14:10:21,809 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 14:10:21,810 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 14:10:21,810 storagegroup.py INFO : Getting details of storage group TEST-06
+2025-01-30 14:10:22,104 storagegroup.py ERROR : Getting details of storage group TEST-06 failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [TEST-06] on Symmetrix [000297901660] cannot be found'}.
+2025-01-30 14:10:22,688 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f911f04df70>
+2025-01-30 14:10:22,689 storagegroup.py INFO : Connection closed successfully
+2025-01-30 14:13:49,079 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 14:13:52,002 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 14:13:52,002 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 14:13:52,003 storagegroup.py INFO : Getting details of storage group TEST-06
+2025-01-30 14:13:52,369 storagegroup.py ERROR : Getting details of storage group TEST-06 failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [TEST-06] on Symmetrix [000297901660] cannot be found'}.
+2025-01-30 14:13:53,103 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f910ff33380>
+2025-01-30 14:13:53,104 storagegroup.py INFO : Connection closed successfully
+2025-01-30 14:17:35,119 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 14:17:36,123 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 14:17:36,123 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 14:17:36,123 storagegroup.py INFO : Getting details of storage group TEST-06
+2025-01-30 14:17:36,375 storagegroup.py ERROR : Getting details of storage group TEST-06 failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [TEST-06] on Symmetrix [000297901660] cannot be found'}.
+2025-01-30 14:17:36,869 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f6372b8f260>
+2025-01-30 14:17:36,870 storagegroup.py INFO : Connection closed successfully
+2025-01-30 14:18:09,311 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 14:18:12,272 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 14:18:12,272 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 14:18:12,273 storagegroup.py INFO : Getting details of storage group TEST-06
+2025-01-30 14:18:12,527 storagegroup.py ERROR : Getting details of storage group TEST-06 failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [TEST-06] on Symmetrix [000297901660] cannot be found'}.
+2025-01-30 14:18:13,034 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f195248f290>
+2025-01-30 14:18:13,036 storagegroup.py INFO : Connection closed successfully
+2025-01-30 14:18:46,106 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 14:18:47,569 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 14:18:47,569 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 14:18:47,569 storagegroup.py INFO : Getting details of storage group TEST-06
+2025-01-30 14:18:47,934 storagegroup.py ERROR : Getting details of storage group TEST-06 failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [TEST-06] on Symmetrix [000297901660] cannot be found'}.
+2025-01-30 14:18:48,655 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fc194de6c90>
+2025-01-30 14:18:48,655 storagegroup.py INFO : Connection closed successfully
+2025-01-30 14:21:08,554 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-01-30 14:21:09,566 storagegroup.py INFO : Check Mode flag is False
+2025-01-30 14:21:09,567 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-01-30 14:21:09,567 storagegroup.py INFO : Getting details of storage group TEST-06
+2025-01-30 14:21:09,825 storagegroup.py ERROR : Getting details of storage group TEST-06 failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [TEST-06] on Symmetrix [000297901660] cannot be found'}.
+2025-01-30 14:21:10,325 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f7eae16ebd0>
+2025-01-30 14:21:10,327 storagegroup.py INFO : Connection closed successfully
+2025-02-16 10:51:21,897 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 10:51:24,991 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 10:51:24,991 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 10:51:24,992 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 10:51:25,356 storagegroup.py ERROR : Getting details of storage group Sarah_ss_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Sarah_ss_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 10:51:25,716 storagegroup.py INFO : Creating storage group Sarah_ss_g
+2025-02-16 10:51:25,716 storagegroup.py INFO : Creating empty storage group Sarah_ss_g 
+2025-02-16 10:51:28,192 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 10:51:28,552 storagegroup.py INFO : Get volumes details of storage group Sarah_ss_g
+2025-02-16 10:51:28,552 storagegroup.py INFO : Getting volumes details of storage group Sarah_ss_g
+2025-02-16 10:51:28,913 storagegroup.py INFO : 0 volumes present in storage group Sarah_ss_g
+2025-02-16 10:51:28,914 storagegroup.py INFO : Getting the list of volumes from storage group Sarah_ss_g
+2025-02-16 10:51:29,272 storagegroup.py INFO : 0 volumes present in storage group Sarah_ss_g
+2025-02-16 10:51:29,273 storagegroup.py INFO : Found storage group {'storageGroupId': 'Sarah_ss_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 0, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 0.0, 'device_emulation': 'N/A', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'unreducible_data_gb': 0.0}
+2025-02-16 10:51:29,273 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 10:51:29,990 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f19ea453290>
+2025-02-16 10:51:29,992 storagegroup.py INFO : Connection closed successfully
+2025-02-16 10:52:45,385 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 10:52:46,491 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 10:52:46,491 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 10:52:46,491 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 10:52:47,027 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 10:52:47,027 storagegroup.py INFO : Delete storage group Sarah_ss_g 
+2025-02-16 10:52:49,914 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fe3375fef90>
+2025-02-16 10:52:49,916 storagegroup.py INFO : Connection closed successfully
+2025-02-16 11:13:42,620 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 11:13:45,217 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 11:13:45,217 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 11:13:45,217 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 11:13:45,505 storagegroup.py ERROR : Getting details of storage group Aly_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Aly_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 11:13:45,786 storagegroup.py INFO : Creating storage group Aly_g
+2025-02-16 11:13:45,786 storagegroup.py INFO : Creating empty storage group Aly_g 
+2025-02-16 11:13:48,180 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 11:13:48,460 storagegroup.py INFO : Get volumes details of storage group Aly_g
+2025-02-16 11:13:48,460 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-02-16 11:13:48,742 storagegroup.py INFO : 0 volumes present in storage group Aly_g
+2025-02-16 11:13:48,742 storagegroup.py INFO : Getting the list of volumes from storage group Aly_g
+2025-02-16 11:13:49,024 storagegroup.py INFO : 0 volumes present in storage group Aly_g
+2025-02-16 11:13:49,024 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 0, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 0.0, 'device_emulation': 'N/A', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'unreducible_data_gb': 0.0}
+2025-02-16 11:13:49,024 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 11:13:49,588 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f72541a1c70>
+2025-02-16 11:13:49,590 storagegroup.py INFO : Connection closed successfully
+2025-02-16 12:09:11,159 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 12:09:13,794 volume.py INFO : Check Mode Flag False
+2025-02-16 12:09:13,794 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 12:09:14,075 volume.py INFO : SG MSG: Aly_g 
+2025-02-16 12:09:14,075 volume.py INFO : Getting storage group Aly_g details
+2025-02-16 12:09:20,135 volume.py INFO : Failed to retrieve volume id. Exception received was 'status'.
+2025-02-16 12:09:20,135 volume.py INFO : Created volume native ID: None
+2025-02-16 12:09:20,437 volume.py INFO : Getting volume 00069 details using native id
+2025-02-16 12:09:20,816 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fbdc9622f30>
+2025-02-16 12:09:20,817 volume.py INFO : Connection closed successfully
+2025-02-16 12:10:08,813 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 12:10:09,850 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 12:10:09,851 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 12:10:09,851 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 12:10:10,402 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 12:10:10,402 storagegroup.py INFO : Remove existing volumes from storage group Edward_LNK_SG_001
+2025-02-16 12:10:10,654 storagegroup.py INFO : The given volumes ['00069'] are not present on the storage group Edward_LNK_SG_001
+2025-02-16 12:10:10,654 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 12:10:10,906 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 12:10:15,655 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 18, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 30.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 12:10:15,655 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 12:10:16,168 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f64a13c1610>
+2025-02-16 12:10:16,169 storagegroup.py INFO : Connection closed successfully
+2025-02-16 12:10:16,924 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 12:10:18,374 volume.py INFO : Check Mode Flag False
+2025-02-16 12:10:18,374 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 12:10:18,374 volume.py INFO : Getting volume 00069 details using native id
+2025-02-16 12:10:18,748 volume.py INFO : Deleting volume 00069 
+2025-02-16 12:10:19,162 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 3 seconds.
+2025-02-16 12:10:22,569 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 6 seconds.
+2025-02-16 12:10:28,968 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7ff27ca0b2c0>
+2025-02-16 12:10:28,969 volume.py INFO : Connection closed successfully
+2025-02-16 12:10:28,969 volume.py ERROR : Delete volume 00069 failed with error Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}. 
+2025-02-16 12:11:04,453 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 12:11:05,616 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 12:11:05,616 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 12:11:05,617 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 12:11:06,127 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 12:11:06,127 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-02-16 12:11:08,004 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-02-16 12:11:08,262 storagegroup.py INFO : 0 volumes present in storage group Aly_g
+2025-02-16 12:11:08,262 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'NONE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 1.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 12:11:08,262 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 12:11:08,768 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fa6c6fb1d60>
+2025-02-16 12:11:08,770 storagegroup.py INFO : Connection closed successfully
+2025-02-16 12:11:09,220 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 12:11:10,220 volume.py INFO : Check Mode Flag False
+2025-02-16 12:11:10,221 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 12:11:10,221 volume.py INFO : Getting volume 00069 details using native id
+2025-02-16 12:11:10,590 volume.py INFO : Deleting volume 00069 
+2025-02-16 12:11:17,184 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fb9c91ce840>
+2025-02-16 12:11:17,188 volume.py INFO : Connection closed successfully
+2025-02-16 12:12:44,626 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 12:12:46,088 volume.py INFO : Check Mode Flag False
+2025-02-16 12:12:46,089 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 12:12:46,089 volume.py INFO : Getting volume 00059 details using native id
+2025-02-16 12:12:57,507 volume.py INFO : Getting volume 00059 details using native id
+2025-02-16 12:12:57,933 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f69bb05e240>
+2025-02-16 12:12:57,934 volume.py INFO : Connection closed successfully
+2025-02-16 13:39:09,226 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 13:39:12,039 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 13:39:12,039 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 13:39:12,039 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 13:39:12,342 storagegroup.py ERROR : Getting details of storage group Sarah_ss_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Sarah_ss_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 13:39:12,975 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f2269761610>
+2025-02-16 13:39:12,977 storagegroup.py INFO : Connection closed successfully
+2025-02-16 13:41:15,843 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 13:41:17,259 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 13:41:17,259 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 13:41:17,259 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 13:41:17,543 storagegroup.py ERROR : Getting details of storage group Sarah_ss_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Sarah_ss_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 13:41:18,097 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f31cc6db380>
+2025-02-16 13:41:18,100 storagegroup.py INFO : Connection closed successfully
+2025-02-16 13:43:03,209 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 13:43:04,949 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 13:43:04,949 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 13:43:04,949 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 13:43:05,429 storagegroup.py ERROR : Getting details of storage group Sarah_ss_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Sarah_ss_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 13:43:06,216 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fc47178a2d0>
+2025-02-16 13:43:06,217 storagegroup.py INFO : Connection closed successfully
+2025-02-16 13:50:05,563 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 13:50:08,308 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 13:50:08,308 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 13:50:08,308 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 13:50:08,646 storagegroup.py ERROR : Getting details of storage group Sarah_ss_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Sarah_ss_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 13:50:09,217 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7ff9980c3cb0>
+2025-02-16 13:50:09,218 storagegroup.py INFO : Connection closed successfully
+2025-02-16 13:52:52,638 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 13:52:54,316 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 13:52:54,317 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 13:52:54,317 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 13:52:54,620 storagegroup.py ERROR : Getting details of storage group Sarah_ss_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Sarah_ss_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 13:52:55,242 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f2749033830>
+2025-02-16 13:52:55,247 storagegroup.py INFO : Connection closed successfully
+2025-02-16 13:58:39,870 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 13:58:42,697 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 13:58:42,698 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 13:58:42,698 storagegroup.py INFO : Getting details of storage group Sarah_ss_g
+2025-02-16 13:58:43,005 storagegroup.py ERROR : Getting details of storage group Sarah_ss_g failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Sarah_ss_g] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 13:58:43,620 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fc15cc6f0b0>
+2025-02-16 13:58:43,621 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:01:56,893 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:01:58,487 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:01:58,488 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:01:58,488 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:01:59,195 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:01:59,196 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:01:59,196 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:01:59,546 storagegroup.py INFO : Processing vol {'vol_id': '0002B'}
+2025-02-16 14:01:59,546 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:01:59,897 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:02:07,294 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:02:14,884 storagegroup.py INFO : The given volumes ['0002B'] are already present in storage group Edward_LNK_SG_001
+2025-02-16 14:02:14,885 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:02:15,284 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:02:22,657 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:02:23,024 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:02:23,025 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 18, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 30.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:02:23,025 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:02:23,758 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fbe2f18bcb0>
+2025-02-16 14:02:23,761 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:03:54,564 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:03:57,769 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:03:57,769 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:03:57,769 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:03:58,501 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:03:58,501 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:03:58,501 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:03:58,890 storagegroup.py INFO : Processing vol {'vol_id': '0002B'}
+2025-02-16 14:03:58,890 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:03:59,321 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:04:06,229 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:04:13,910 storagegroup.py INFO : The given volumes ['0002B'] are already present in storage group Edward_LNK_SG_001
+2025-02-16 14:04:13,911 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:04:14,292 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:04:21,552 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:04:21,955 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:04:21,956 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 18, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 30.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:04:21,957 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:04:22,817 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fabfde167b0>
+2025-02-16 14:04:22,820 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:07:30,300 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:07:32,009 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:07:32,009 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:07:32,010 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:07:32,825 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:07:32,825 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:07:32,825 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:07:33,182 storagegroup.py INFO : Processing vol {'vol_id': '0002B'}
+2025-02-16 14:07:33,182 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:07:33,541 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:07:40,506 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:07:48,392 storagegroup.py INFO : The given volumes ['0002B'] are already present in storage group Edward_LNK_SG_001
+2025-02-16 14:07:48,392 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:07:48,800 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:07:56,070 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:07:56,480 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:07:56,481 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 18, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 30.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:07:56,481 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:07:57,246 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f128a463cb0>
+2025-02-16 14:07:57,247 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:09:20,593 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:09:23,550 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:09:23,551 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:09:23,551 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:09:24,185 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:09:24,185 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:09:24,186 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:09:24,468 storagegroup.py INFO : Processing vol {'vol_id': '0005E'}
+2025-02-16 14:09:24,468 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:09:24,756 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:09:30,560 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:09:37,388 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f1c0f7fe7b0>
+2025-02-16 14:09:37,389 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:09:37,390 storagegroup.py ERROR : Adding existing volumes to storage group Edward_LNK_SG_001 failed with error Bad or unexpected response from the storage volume backend API: Error PUT symmetrix resource. The status code received is 500 and the message is {'message': "A problem occurred modifying the storage group resource: Error in Adding Volumes Storage Group 'Edward_LNK_SG_001': A device cannot belong to more than one storage group in use by FAST"}.
+2025-02-16 14:12:08,548 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:12:10,231 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:12:10,231 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:12:10,231 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 14:12:11,048 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:12:11,048 storagegroup.py INFO : Get volumes details of storage group Aly_g
+2025-02-16 14:12:11,048 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-02-16 14:12:11,406 storagegroup.py INFO : 0 volumes present in storage group Aly_g
+2025-02-16 14:12:11,406 storagegroup.py INFO : Getting the list of volumes from storage group Aly_g
+2025-02-16 14:12:11,867 storagegroup.py INFO : 0 volumes present in storage group Aly_g
+2025-02-16 14:12:11,867 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 0, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 0.0, 'device_emulation': 'N/A', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'unreducible_data_gb': 0.0}
+2025-02-16 14:12:11,867 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 14:12:12,634 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f47276a9d60>
+2025-02-16 14:12:12,635 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:12:46,260 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:12:47,536 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:12:47,536 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:12:47,536 storagegroup.py INFO : Getting details of storage group Aly_ga
+2025-02-16 14:12:47,810 storagegroup.py ERROR : Getting details of storage group Aly_ga failed with error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Storage Group [Aly_ga] on Symmetrix [000297901660] cannot be found'}.
+2025-02-16 14:12:48,066 storagegroup.py INFO : Creating storage group Aly_ga
+2025-02-16 14:12:48,066 storagegroup.py INFO : Creating empty storage group Aly_ga 
+2025-02-16 14:12:50,473 storagegroup.py INFO : Getting details of storage group Aly_ga
+2025-02-16 14:12:50,780 storagegroup.py INFO : Get volumes details of storage group Aly_ga
+2025-02-16 14:12:50,780 storagegroup.py INFO : Getting volumes details of storage group Aly_ga
+2025-02-16 14:12:51,037 storagegroup.py INFO : 0 volumes present in storage group Aly_ga
+2025-02-16 14:12:51,037 storagegroup.py INFO : Getting the list of volumes from storage group Aly_ga
+2025-02-16 14:12:51,394 storagegroup.py INFO : 0 volumes present in storage group Aly_ga
+2025-02-16 14:12:51,394 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_ga', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 0, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 0.0, 'device_emulation': 'N/A', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'unreducible_data_gb': 0.0}
+2025-02-16 14:12:51,394 storagegroup.py INFO : Getting details of storage group Aly_ga
+2025-02-16 14:12:52,009 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f132fb6b380>
+2025-02-16 14:12:52,010 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:17:08,045 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:17:10,890 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:17:10,890 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:17:10,890 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:17:11,493 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:17:11,493 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:17:11,493 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:17:11,777 storagegroup.py INFO : Processing vol {'vol_name': 'Dell_new_volume', 'size': 1}
+2025-02-16 14:17:12,414 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:17:12,722 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:17:18,250 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:17:24,397 storagegroup.py INFO : The given volumes [] are already present in storage group Edward_LNK_SG_001
+2025-02-16 14:17:24,398 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:17:24,718 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:17:30,334 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:17:30,641 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:17:30,641 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 18, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 30.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:17:30,642 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:17:31,232 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f5126881610>
+2025-02-16 14:17:31,234 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:23:05,833 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:23:08,801 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:23:08,801 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:23:08,801 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:23:09,587 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:23:09,587 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:23:09,587 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:23:09,895 storagegroup.py INFO : Processing vol {'vol_name': 'Dell_new_volume', 'size': 1}
+2025-02-16 14:23:10,495 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:23:10,816 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:23:16,450 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:23:22,564 storagegroup.py INFO : The given volumes [] are already present in storage group Edward_LNK_SG_001
+2025-02-16 14:23:22,564 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:23:22,902 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:23:28,430 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:23:28,750 storagegroup.py INFO : 18 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:23:28,750 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 18, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 30.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:23:28,751 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:23:29,454 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7efd33b322d0>
+2025-02-16 14:23:29,456 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:25:17,008 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:25:18,305 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:25:18,305 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:25:18,305 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:25:18,817 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:25:18,817 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:25:18,817 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:25:19,124 storagegroup.py INFO : Processing vol {'vol_name': 'sara_new_volume', 'size': 1}
+2025-02-16 14:25:19,379 storagegroup.py INFO : No volume found with volume identifier sara_new_volume in storage group Edward_LNK_SG_001
+2025-02-16 14:25:19,380 storagegroup.py INFO : Creating volume with name sara_new_volume, size 1 GB
+2025-02-16 14:25:25,498 storagegroup.py INFO : Volume created!
+2025-02-16 14:25:25,498 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:25:25,786 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:25:31,372 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:25:37,200 storagegroup.py INFO : The given volumes [] are already present in storage group Edward_LNK_SG_001
+2025-02-16 14:25:37,200 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:25:37,531 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:25:42,643 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:25:42,993 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:25:42,993 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 18, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 30.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:25:42,993 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:25:43,559 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f30ea5fac30>
+2025-02-16 14:25:43,561 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:26:33,114 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:26:34,454 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:26:34,455 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:26:34,455 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:26:35,107 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:26:35,107 storagegroup.py INFO : Create new volumes for storage group Edward_LNK_SG_001
+2025-02-16 14:26:35,107 storagegroup.py INFO : Creating new volumes for SG Edward_LNK_SG_001
+2025-02-16 14:26:35,418 storagegroup.py INFO : Processing vol {'vol_name': 'sara_new_volume', 'size': 1}
+2025-02-16 14:26:36,097 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:26:36,457 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:26:42,688 storagegroup.py INFO : Add existing volumes to storage group Edward_LNK_SG_001
+2025-02-16 14:26:49,518 storagegroup.py INFO : The given volumes [] are already present in storage group Edward_LNK_SG_001
+2025-02-16 14:26:49,519 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:26:49,810 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:26:55,896 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:26:56,207 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:26:56,207 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 19, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 31.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:26:56,208 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:26:56,796 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fd86071d5b0>
+2025-02-16 14:26:56,798 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:30:18,054 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:30:21,584 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:30:21,585 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:30:21,585 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:30:22,443 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:30:22,443 storagegroup.py INFO : Get volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:30:22,444 storagegroup.py INFO : Getting volumes details of storage group Edward_LNK_SG_001
+2025-02-16 14:30:22,823 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:30:30,635 storagegroup.py INFO : Getting the list of volumes from storage group Edward_LNK_SG_001
+2025-02-16 14:30:31,056 storagegroup.py INFO : 19 volumes present in storage group Edward_LNK_SG_001
+2025-02-16 14:30:31,057 storagegroup.py INFO : Found storage group {'storageGroupId': 'Edward_LNK_SG_001', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 19, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 31.03, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:30:31,058 storagegroup.py INFO : Getting details of storage group Edward_LNK_SG_001
+2025-02-16 14:30:31,801 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fb9990a70b0>
+2025-02-16 14:30:31,811 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:34:17,742 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:34:19,014 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:34:19,014 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:34:19,014 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:34:19,525 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:34:19,526 storagegroup.py INFO : Get volumes details of storage group sa
+2025-02-16 14:34:19,526 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-02-16 14:34:19,780 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:34:20,048 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-02-16 14:34:20,302 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:34:20,302 storagegroup.py INFO : Found storage group {'storageGroupId': 'sa', 'slo': 'Silver', 'service_level': 'Silver', 'base_slo_name': 'Silver', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 7.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': False, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:34:20,302 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:34:20,824 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f2b230655b0>
+2025-02-16 14:34:20,826 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:34:58,826 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:35:01,447 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:35:01,447 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:35:01,447 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:35:01,993 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:35:01,994 storagegroup.py INFO : Get volumes details of storage group sa
+2025-02-16 14:35:01,994 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-02-16 14:35:02,254 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:35:02,527 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-02-16 14:35:02,781 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:35:02,782 storagegroup.py INFO : Found storage group {'storageGroupId': 'sa', 'slo': 'Silver', 'service_level': 'Silver', 'base_slo_name': 'Silver', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 7.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': False, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:35:02,782 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:35:03,293 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7ff90f3df0b0>
+2025-02-16 14:35:03,295 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:35:53,259 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:35:54,553 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:35:54,554 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:35:54,554 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:35:55,252 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:35:55,253 storagegroup.py INFO : Get volumes details of storage group sa
+2025-02-16 14:35:55,253 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-02-16 14:35:55,665 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:35:56,071 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-02-16 14:35:56,481 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:35:56,482 storagegroup.py INFO : Found storage group {'storageGroupId': 'sa', 'slo': 'Silver', 'service_level': 'Silver', 'base_slo_name': 'Silver', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 7.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': False, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:35:56,482 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:35:57,505 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f202eb2f0b0>
+2025-02-16 14:35:57,507 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:38:17,907 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:38:19,483 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:38:19,484 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:38:19,484 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:38:20,347 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 14:38:20,347 storagegroup.py INFO : Get volumes details of storage group sa
+2025-02-16 14:38:20,347 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-02-16 14:38:20,702 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:38:21,059 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-02-16 14:38:21,413 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:38:21,413 storagegroup.py INFO : Found storage group {'storageGroupId': 'sa', 'slo': 'Silver', 'service_level': 'Silver', 'base_slo_name': 'Silver', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 7.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': False, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:38:21,413 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:38:22,185 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f60744a40b0>
+2025-02-16 14:38:22,186 storagegroup.py INFO : Connection closed successfully
+2025-02-16 14:38:56,082 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 14:38:57,666 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 14:38:57,667 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 14:38:57,667 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:38:58,434 storagegroup.py INFO : The storage group True needs to be modified and the modified param are {'modified_slo': 'Diamond'} 
+2025-02-16 14:38:58,435 storagegroup.py INFO : Get volumes details of storage group sa
+2025-02-16 14:38:58,435 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-02-16 14:38:58,844 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:38:59,252 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-02-16 14:38:59,661 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:38:59,662 storagegroup.py INFO : Modifying storage group sa
+2025-02-16 14:38:59,662 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:39:00,016 storagegroup.py INFO : Modifying the SG SLO to Diamond 
+2025-02-16 14:39:00,016 storagegroup.py INFO : The existing SG SLO is Silver and the desired SG SLO is Diamond 
+2025-02-16 14:39:04,678 storagegroup.py INFO : Getting volumes details of storage group sa
+2025-02-16 14:39:06,657 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:39:07,122 storagegroup.py INFO : Getting the list of volumes from storage group sa
+2025-02-16 14:39:07,486 storagegroup.py INFO : 1 volumes present in storage group sa
+2025-02-16 14:39:07,486 storagegroup.py INFO : Found storage group {'storageGroupId': 'sa', 'slo': 'Silver', 'service_level': 'Silver', 'base_slo_name': 'Silver', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 7.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': False, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 14:39:07,486 storagegroup.py INFO : Getting details of storage group sa
+2025-02-16 14:39:08,219 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fd47a95f0b0>
+2025-02-16 14:39:08,220 storagegroup.py INFO : Connection closed successfully
+2025-02-16 16:13:49,552 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 16:13:52,484 volume.py INFO : Check Mode Flag False
+2025-02-16 16:13:52,484 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 16:13:52,840 volume.py INFO : SG MSG: Aly_g 
+2025-02-16 16:13:52,841 volume.py INFO : Getting storage group Aly_g details
+2025-02-16 16:13:58,867 volume.py INFO : Failed to retrieve volume id. Exception received was 'status'.
+2025-02-16 16:13:58,867 volume.py INFO : Created volume native ID: None
+2025-02-16 16:13:59,236 volume.py INFO : Getting volume 0006A details using native id
+2025-02-16 16:13:59,690 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f4ca95a3d70>
+2025-02-16 16:13:59,691 volume.py INFO : Connection closed successfully
+2025-02-16 16:14:26,242 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 16:14:27,695 volume.py INFO : Check Mode Flag False
+2025-02-16 16:14:27,696 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 16:14:28,075 volume.py INFO : Getting volume 0006A details using native id
+2025-02-16 16:14:28,530 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-02-16 16:14:28,530 volume.py INFO : Current volume size and specified volume size are equal
+2025-02-16 16:14:28,531 volume.py INFO : Getting volume 0006A details using native id
+2025-02-16 16:14:28,894 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f26847032c0>
+2025-02-16 16:14:28,897 volume.py INFO : Connection closed successfully
+2025-02-16 16:15:47,329 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 16:15:48,748 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 16:15:48,748 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 16:15:48,749 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 16:15:49,453 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 16:15:49,453 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-02-16 16:15:49,802 storagegroup.py INFO : The given volumes ['00069'] are not present on the storage group Aly_g
+2025-02-16 16:15:49,802 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-02-16 16:15:50,160 storagegroup.py INFO : 1 volumes present in storage group Aly_g
+2025-02-16 16:15:50,518 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'NONE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 1.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 16:15:50,519 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 16:15:51,217 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7ff99b626b10>
+2025-02-16 16:15:51,218 storagegroup.py INFO : Connection closed successfully
+2025-02-16 16:15:51,613 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 16:15:52,704 volume.py INFO : Check Mode Flag False
+2025-02-16 16:15:52,704 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 16:15:52,705 volume.py INFO : Getting volume 00069 details using native id
+2025-02-16 16:15:52,981 volume.py INFO : Deleting volume 00069 
+2025-02-16 16:15:53,303 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 3 seconds.
+2025-02-16 16:15:56,619 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 6 seconds.
+2025-02-16 16:16:02,931 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f7c6a40bd70>
+2025-02-16 16:16:02,932 volume.py INFO : Connection closed successfully
+2025-02-16 16:16:02,933 volume.py ERROR : Delete volume 00069 failed with error Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}. 
+2025-02-16 16:17:56,770 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 16:17:59,748 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 16:17:59,748 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 16:17:59,748 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 16:18:00,514 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 16:18:00,514 storagegroup.py INFO : Get volumes details of storage group Aly_g
+2025-02-16 16:18:00,515 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-02-16 16:18:00,898 storagegroup.py INFO : 1 volumes present in storage group Aly_g
+2025-02-16 16:18:01,290 storagegroup.py INFO : Getting the list of volumes from storage group Aly_g
+2025-02-16 16:18:01,681 storagegroup.py INFO : 1 volumes present in storage group Aly_g
+2025-02-16 16:18:01,681 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'NONE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 1.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 16:18:01,681 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 16:18:02,451 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fa7ba96f0b0>
+2025-02-16 16:18:02,453 storagegroup.py INFO : Connection closed successfully
+2025-02-16 16:19:21,327 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 16:19:22,393 storagegroup.py INFO : Check Mode flag is False
+2025-02-16 16:19:22,393 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-02-16 16:19:22,393 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 16:19:22,927 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-02-16 16:19:22,927 storagegroup.py INFO : Get volumes details of storage group Aly_g
+2025-02-16 16:19:22,927 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-02-16 16:19:23,190 storagegroup.py INFO : 1 volumes present in storage group Aly_g
+2025-02-16 16:19:23,460 storagegroup.py INFO : Getting the list of volumes from storage group Aly_g
+2025-02-16 16:19:23,723 storagegroup.py INFO : 1 volumes present in storage group Aly_g
+2025-02-16 16:19:23,723 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'NONE', 'num_of_vols': 1, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 1.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-02-16 16:19:23,724 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-02-16 16:19:24,249 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f5da5eaac30>
+2025-02-16 16:19:24,250 storagegroup.py INFO : Connection closed successfully
+2025-02-16 16:19:24,715 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-02-16 16:19:25,740 volume.py INFO : Check Mode Flag False
+2025-02-16 16:19:25,741 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-02-16 16:19:25,741 volume.py INFO : Getting volume 00069 details using native id
+2025-02-16 16:19:25,998 volume.py INFO : Deleting volume 00069 
+2025-02-16 16:19:26,304 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 3 seconds.
+2025-02-16 16:19:29,615 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 6 seconds.
+2025-02-16 16:19:35,916 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fa568ac7080>
+2025-02-16 16:19:35,918 volume.py INFO : Connection closed successfully
+2025-02-16 16:19:35,919 volume.py ERROR : Delete volume 00069 failed with error Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}. 
+2025-03-02 22:02:46,653 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-02 22:02:49,182 volume.py INFO : Check Mode Flag False
+2025-03-02 22:02:49,182 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-02 22:02:49,457 volume.py INFO : Getting volume 0006A details using native id
+2025-03-02 22:02:49,742 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-03-02 22:02:49,742 volume.py INFO : Current volume size and specified volume size are equal
+2025-03-02 22:02:49,743 volume.py INFO : Getting volume 0006A details using native id
+2025-03-02 22:02:50,030 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7efce953fce0>
+2025-03-02 22:02:50,031 volume.py INFO : Connection closed successfully
+2025-03-02 22:10:21,534 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-02 22:10:24,322 volume.py INFO : Check Mode Flag False
+2025-03-02 22:10:24,322 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-02 22:10:24,613 volume.py INFO : Getting volume 0006A details using native id
+2025-03-02 22:10:24,906 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-03-02 22:10:24,907 volume.py INFO : Current volume size and specified volume size are equal
+2025-03-02 22:10:24,907 volume.py INFO : Getting volume 0006A details using native id
+2025-03-02 22:10:25,204 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fa86e462e70>
+2025-03-02 22:10:25,205 volume.py INFO : Connection closed successfully
+2025-03-05 09:02:41,959 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:02:47,978 volume.py INFO : Check Mode Flag False
+2025-03-05 09:02:47,979 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:02:48,375 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 09:02:48,750 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-03-05 09:02:48,751 volume.py INFO : Current volume size and specified volume size are equal
+2025-03-05 09:02:48,752 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 09:02:49,123 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f1f2016eed0>
+2025-03-05 09:02:49,126 volume.py INFO : Connection closed successfully
+2025-03-05 09:26:11,634 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:26:14,697 volume.py INFO : Check Mode Flag False
+2025-03-05 09:26:14,698 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:26:14,998 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 09:26:15,285 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-03-05 09:26:15,285 volume.py INFO : Current volume size and specified volume size are equal
+2025-03-05 09:26:15,286 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 09:26:15,566 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7ff2a59eeed0>
+2025-03-05 09:26:15,569 volume.py INFO : Connection closed successfully
+2025-03-05 09:27:37,868 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:27:39,573 volume.py INFO : Check Mode Flag False
+2025-03-05 09:27:39,573 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:27:39,948 volume.py INFO : SG MSG: Aly_g 
+2025-03-05 09:27:39,949 volume.py INFO : Getting storage group Aly_g details
+2025-03-05 09:27:45,615 volume.py INFO : Failed to retrieve volume id. Exception received was 'status'.
+2025-03-05 09:27:45,615 volume.py INFO : Created volume native ID: None
+2025-03-05 09:27:46,005 volume.py INFO : Getting volume 0006B details using native id
+2025-03-05 09:27:46,473 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f4791382f00>
+2025-03-05 09:27:46,474 volume.py INFO : Connection closed successfully
+2025-03-05 09:31:12,505 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:31:15,637 volume.py INFO : Check Mode Flag False
+2025-03-05 09:31:15,637 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:31:16,046 volume.py INFO : Getting volume 0006B details using native id
+2025-03-05 09:31:16,553 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-03-05 09:31:16,553 volume.py INFO : Current volume size and specified volume size are equal
+2025-03-05 09:31:16,553 volume.py INFO : Getting volume 0006B details using native id
+2025-03-05 09:31:16,934 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f9d2ffafd70>
+2025-03-05 09:31:16,934 volume.py INFO : Connection closed successfully
+2025-03-05 09:32:43,198 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:32:44,521 volume.py INFO : Check Mode Flag False
+2025-03-05 09:32:44,521 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:32:44,827 volume.py INFO : Getting volume 0006B details using native id
+2025-03-05 09:32:45,133 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-03-05 09:32:45,134 volume.py INFO : Current volume size and specified volume size are equal
+2025-03-05 09:32:45,134 volume.py INFO : Getting volume 0006B details using native id
+2025-03-05 09:32:45,441 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7ff1ae016ae0>
+2025-03-05 09:32:45,443 volume.py INFO : Connection closed successfully
+2025-03-05 09:33:09,021 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:33:10,310 volume.py INFO : Check Mode Flag False
+2025-03-05 09:33:10,310 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:33:10,634 volume.py INFO : SG MSG: Aly_g 
+2025-03-05 09:33:10,634 volume.py INFO : Getting storage group Aly_g details
+2025-03-05 09:33:16,776 volume.py INFO : Failed to retrieve volume id. Exception received was 'status'.
+2025-03-05 09:33:16,776 volume.py INFO : Created volume native ID: None
+2025-03-05 09:33:17,085 volume.py INFO : Getting volume 0006C details using native id
+2025-03-05 09:33:17,497 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fbac0f22420>
+2025-03-05 09:33:17,498 volume.py INFO : Connection closed successfully
+2025-03-05 09:36:13,310 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:36:16,390 volume.py INFO : Check Mode Flag False
+2025-03-05 09:36:16,391 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:36:16,798 volume.py INFO : Getting volume 0006C details using native id
+2025-03-05 09:36:17,225 volume.py INFO : Existing Size: 1.0 GB, Specified Size: 1.00 GB
+2025-03-05 09:36:17,226 volume.py INFO : Current volume size and specified volume size are equal
+2025-03-05 09:36:17,226 volume.py INFO : Getting volume 0006C details using native id
+2025-03-05 09:36:17,581 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fc494959bb0>
+2025-03-05 09:36:17,582 volume.py INFO : Connection closed successfully
+2025-03-05 09:54:58,823 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:55:01,482 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 09:55:01,482 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 09:55:01,482 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 09:55:02,125 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 09:55:02,125 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 09:55:02,383 storagegroup.py INFO : The given volumes ['00069'] are not present on the storage group Aly_g
+2025-03-05 09:55:02,383 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 09:55:02,641 storagegroup.py INFO : 3 volumes present in storage group Aly_g
+2025-03-05 09:55:03,441 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 3, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 3.01, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 09:55:03,441 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 09:55:03,963 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f517a1cfe30>
+2025-03-05 09:55:03,965 storagegroup.py INFO : Connection closed successfully
+2025-03-05 09:55:06,600 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:55:08,178 volume.py INFO : Check Mode Flag False
+2025-03-05 09:55:08,178 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:55:08,178 volume.py INFO : Getting volume 00069 details using native id
+2025-03-05 09:55:08,533 volume.py INFO : Deleting volume 00069 
+2025-03-05 09:55:08,945 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 3 seconds.
+2025-03-05 09:55:12,363 decorators.py WARNING : delete_volume failed due to exception Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}., Retrying in 6 seconds.
+2025-03-05 09:55:18,787 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fbc494f6ed0>
+2025-03-05 09:55:18,791 volume.py INFO : Connection closed successfully
+2025-03-05 09:55:18,792 volume.py ERROR : Delete volume 00069 failed with error Bad or unexpected response from the storage volume backend API: Error DELETE symmetrix resource. The status code received is 500 and the message is {'message': 'A problem occurred deleting the volume resources: Cannot perform requested operation because the device is a member of a storage group'}. 
+2025-03-05 09:59:32,184 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:59:34,707 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 09:59:34,708 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 09:59:34,708 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 09:59:35,233 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 09:59:35,234 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 09:59:40,303 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 09:59:40,558 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 09:59:41,181 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 3, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 3.01, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 09:59:41,181 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 09:59:41,703 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f49a74dbd70>
+2025-03-05 09:59:41,705 storagegroup.py INFO : Connection closed successfully
+2025-03-05 09:59:42,211 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 09:59:43,809 volume.py INFO : Check Mode Flag False
+2025-03-05 09:59:43,809 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 09:59:43,810 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 09:59:44,189 volume.py INFO : Deleting volume 0006A 
+2025-03-05 09:59:50,898 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f641dcd2f00>
+2025-03-05 09:59:50,901 volume.py INFO : Connection closed successfully
+2025-03-05 10:05:51,871 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:05:54,377 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:05:54,377 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:05:54,377 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:05:54,927 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:05:54,928 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 10:05:55,195 storagegroup.py INFO : The given volumes ['0006A'] are not present on the storage group Aly_g
+2025-03-05 10:05:55,195 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:05:55,464 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:05:56,037 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:05:56,038 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:05:56,579 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f115ed95df0>
+2025-03-05 10:05:56,580 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:05:57,568 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:05:58,813 volume.py INFO : Check Mode Flag False
+2025-03-05 10:05:58,813 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:05:58,814 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 10:05:59,105 volume.py ERROR : Got error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Volume [0006A] on Symmetrix [000297901660] cannot be found'}. while getting details of volume 0006A
+2025-03-05 10:05:59,105 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fb6f5145130>
+2025-03-05 10:05:59,108 volume.py INFO : Connection closed successfully
+2025-03-05 10:09:51,982 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:09:53,124 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:09:53,124 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:09:53,124 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:09:53,687 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:09:53,687 storagegroup.py INFO : Get volumes details of storage group Aly_g
+2025-03-05 10:09:53,688 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:09:53,966 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:09:56,149 storagegroup.py INFO : Getting the list of volumes from storage group Aly_g
+2025-03-05 10:09:56,434 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:09:56,434 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:09:56,434 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:09:57,004 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fc40550aea0>
+2025-03-05 10:09:57,006 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:11:03,989 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:11:05,168 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:11:05,169 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:11:05,169 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:11:05,685 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:11:05,685 storagegroup.py INFO : Get volumes details of storage group Aly_g
+2025-03-05 10:11:05,685 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:11:05,942 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:11:06,480 storagegroup.py INFO : Getting the list of volumes from storage group Aly_g
+2025-03-05 10:11:06,739 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:11:06,739 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:11:06,739 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:11:07,266 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fb76a4ca330>
+2025-03-05 10:11:07,268 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:13:55,859 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:13:58,465 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:13:58,465 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:13:58,466 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:13:59,019 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:13:59,019 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 10:13:59,290 storagegroup.py INFO : The given volumes ['0006A'] are not present on the storage group Aly_g
+2025-03-05 10:13:59,291 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:13:59,562 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:14:00,124 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:14:00,125 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:14:00,673 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f1b3c973200>
+2025-03-05 10:14:00,674 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:14:01,175 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:14:02,330 volume.py INFO : Check Mode Flag False
+2025-03-05 10:14:02,330 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:14:02,330 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 10:14:02,623 volume.py ERROR : Got error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Volume [0006A] on Symmetrix [000297901660] cannot be found'}. while getting details of volume 0006A
+2025-03-05 10:14:02,623 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f7b70a02420>
+2025-03-05 10:14:02,625 volume.py INFO : Connection closed successfully
+2025-03-05 10:15:00,602 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:15:02,104 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:15:02,104 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:15:02,104 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:15:02,852 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:15:02,852 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 10:15:03,228 storagegroup.py INFO : The given volumes ['0006A'] are not present on the storage group Aly_g
+2025-03-05 10:15:03,229 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:15:03,597 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:15:04,367 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:15:04,367 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:15:05,109 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f6ac5b630b0>
+2025-03-05 10:15:05,111 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:17:46,016 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:17:47,445 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:17:47,445 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:17:47,445 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:17:48,158 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:17:48,159 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 10:17:48,512 storagegroup.py INFO : The given volumes ['0006A'] are not present on the storage group Aly_g
+2025-03-05 10:17:48,512 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:17:48,871 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:17:49,621 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:17:49,622 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:17:50,323 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fed4d603080>
+2025-03-05 10:17:50,324 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:17:50,753 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:17:51,774 volume.py INFO : Check Mode Flag False
+2025-03-05 10:17:51,774 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:17:51,774 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 10:17:52,030 volume.py ERROR : Got error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Volume [0006A] on Symmetrix [000297901660] cannot be found'}. while getting details of volume 0006A
+2025-03-05 10:17:52,030 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f865e1c6ff0>
+2025-03-05 10:17:52,031 volume.py INFO : Connection closed successfully
+2025-03-05 10:18:36,129 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:18:38,764 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:18:38,765 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:18:38,765 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:18:39,323 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:18:39,324 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 10:18:39,601 storagegroup.py INFO : The given volumes ['0006A'] are not present on the storage group Aly_g
+2025-03-05 10:18:39,601 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:18:39,884 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:18:40,458 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:18:40,459 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:18:41,019 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f1231569df0>
+2025-03-05 10:18:41,021 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:18:41,519 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:18:42,733 volume.py INFO : Check Mode Flag False
+2025-03-05 10:18:42,734 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:18:42,734 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 10:18:43,013 volume.py ERROR : Got error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Volume [0006A] on Symmetrix [000297901660] cannot be found'}. while getting details of volume 0006A
+2025-03-05 10:18:43,014 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fc33d5fec30>
+2025-03-05 10:18:43,015 volume.py INFO : Connection closed successfully
+2025-03-05 10:21:50,346 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:21:51,523 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:21:51,523 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:21:51,523 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:21:52,030 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:21:52,031 storagegroup.py INFO : Remove existing volumes from storage group Aly_g
+2025-03-05 10:21:52,284 storagegroup.py INFO : The given volumes ['0006A'] are not present on the storage group Aly_g
+2025-03-05 10:21:52,285 storagegroup.py INFO : Getting volumes details of storage group Aly_g
+2025-03-05 10:21:52,536 storagegroup.py INFO : 2 volumes present in storage group Aly_g
+2025-03-05 10:21:53,061 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_g', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 2, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 2.0, 'device_emulation': 'FBA', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'vp_saved_percent': 100.0, 'unreducible_data_gb': 0.0}
+2025-03-05 10:21:53,061 storagegroup.py INFO : Getting details of storage group Aly_g
+2025-03-05 10:21:53,569 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f797ffc7e30>
+2025-03-05 10:21:53,570 storagegroup.py INFO : Connection closed successfully
+2025-03-05 10:21:54,255 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:21:55,457 volume.py INFO : Check Mode Flag False
+2025-03-05 10:21:55,457 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:21:55,457 volume.py INFO : Getting volume 0006A details using native id
+2025-03-05 10:21:55,728 volume.py ERROR : Got error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Volume [0006A] on Symmetrix [000297901660] cannot be found'}. while getting details of volume 0006A
+2025-03-05 10:21:55,729 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f5dd0a0eff0>
+2025-03-05 10:21:55,731 volume.py INFO : Connection closed successfully
+2025-03-05 10:24:50,843 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:24:53,864 volume.py INFO : Check Mode Flag False
+2025-03-05 10:24:53,864 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:24:53,864 volume.py INFO : Getting volume 00059 details using native id
+2025-03-05 10:24:54,223 volume.py INFO : Getting volume 00059 details using native id
+2025-03-05 10:24:54,577 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f27dabdaf00>
+2025-03-05 10:24:54,579 volume.py INFO : Connection closed successfully
+2025-03-05 10:28:50,736 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:28:51,929 volume.py INFO : Check Mode Flag False
+2025-03-05 10:28:51,929 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:28:51,929 volume.py INFO : Getting volume 0005978 details using native id
+2025-03-05 10:28:52,189 volume.py ERROR : Got error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Volume [0005978] on Symmetrix [000297901660] cannot be found'}. while getting details of volume 0005978
+2025-03-05 10:28:52,190 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fb0e5582f00>
+2025-03-05 10:28:52,192 volume.py INFO : Connection closed successfully
+2025-03-05 10:28:52,193 volume.py ERROR : Invalid argument new_name while creating a volume
+2025-03-05 10:30:23,280 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:30:26,647 volume.py INFO : Check Mode Flag False
+2025-03-05 10:30:26,648 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:30:26,648 volume.py INFO : Getting volume 0005978 details using native id
+2025-03-05 10:30:27,016 volume.py ERROR : Got error The requested resource was not found: Error GET symmetrix. The status code received is 404 and the message is {'message': 'Volume [0005978] on Symmetrix [000297901660] cannot be found'}. while getting details of volume 0005978
+2025-03-05 10:30:27,016 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f687ae9ecf0>
+2025-03-05 10:30:27,017 volume.py INFO : Connection closed successfully
+2025-03-05 10:30:27,018 volume.py ERROR : Invalid argument new_name while creating a volume

@@ -1,6 +1,6 @@
 # vars/create_volume.yml
-vol_name: "sara_g"
-volume_size: 1
-sg_name: "Edward_LNK_SG_001"
-cap_unit: 'GB'
-append_vol_id: true
+vol_name: "test2" # Please enter the name of the volume to be created.
+volume_size: 1 # Please enter the size of the volume (numeric value).
+sg_name: "Aly_g" # Please enter the name of the storage group where the volume will be assigned.
+cap_unit: 'GB' # Please enter the unit of measurement for the volume size
+append_vol_id: true # Whether to append a unique volume ID to the volume name (true/false).

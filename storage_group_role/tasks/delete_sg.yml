@@ -1,0 +1,32 @@
+- name: Delete Storage Group
+  block:
+    - name: Delete the Storage Group
+      dellemc.powermax.storagegroup:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        sg_name: "{{ sg_name }}"
+        state: "absent"
+      register: sg_delete_result
+      changed_when: sg_delete_result.changed | default(false)
+      failed_when: sg_delete_result.failed | default(false) or (not sg_delete_result.changed)
+
+    - name: Notify success handler
+      ansible.builtin.debug:
+        msg: " The Storage Group '{{ sg_name }}' has been successfully deleted."
+      changed_when: false
+      notify: "Storage_group_deleted"
+
+  rescue:
+    - name: Notify failure handler
+      ansible.builtin.debug:
+        msg: " Failed to delete Storage Group '{{ sg_name }}'. Ensure that the Storage Group exists and check logs for details."
+      changed_when: false
+      notify: "Storage_group_deletion_failed"
+
+  always:
+    - name: Ensure handlers run
+      ansible.builtin.meta: flush_handlers

@@ -1,15 +1,34 @@
-- name: Create volume
-  register: result
-  dellemc.powermax.volume:
-    unispherehost: "{{ unispherehost }}"
-    universion: "{{ universion }}"
-    verifycert: "{{ verifycert }}"
-    user: "{{ user }}"
-    password: "{{ password }}"
-    serial_no: "{{ serial_no }}"
-    vol_name: "{{ vol_name }}"
-    sg_name: "{{ sg_name }}"
-    size: "{{ volume_size }}"
-    cap_unit: "{{ cap_unit }}"
-    append_vol_id: "{{ append_vol_id }}"
-    state: 'present'
+- name: Ensure volume is created and handle errors
+  block:
+    - name: Create volume
+      register: result
+      dellemc.powermax.volume:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        vol_name: "{{ vol_name }}"
+        sg_name: "{{ sg_name }}"
+        size: 1
+        cap_unit: "{{ cap_unit }}"
+        append_vol_id: "{{ append_vol_id }}"
+        state: "present"
+
+  rescue:
+    - name: Capture failure reason
+      ansible.builtin.debug:
+        msg: "Failed to create volume: {{ result.msg }}"
+
+  always:
+    - name: Display volume creation status
+      ansible.builtin.debug:
+        msg: >-
+          {% if result.changed %}
+          "Volume '{{ vol_name }}' was created successfully in Storage Group '{{ sg_name }}'."
+          {% elif result.failed is defined and result.failed %}
+          "Volume creation failed: {{ result.msg }}"
+          {% else %}
+          "Volume '{{ vol_name }}' already exists in Storage Group '{{ sg_name }}'."
+          {% endif %}

@@ -1,14 +1,40 @@
 - name: Add existing volumes to existing Storage Group
-  dellemc.powermax.storagegroup:
-    unispherehost: "{{ unispherehost }}"
-    universion: "{{ universion }}"
-    verifycert: "{{ verifycert }}"
-    user: "{{ user }}"
-    password: "{{ password }}"
-    serial_no: "{{ serial_no }}"
-    sg_name: "{{ sg_name }}"
-    state: "present"
-    volumes:
-      - vol_id: "{{ vol_id }}"
-    vol_state: "present-in-group"
-  register: sg_result
+  block:
+    - name: Add volumes to the Storage Group
+      dellemc.powermax.storagegroup:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        sg_name: "{{ sg_name }}"
+        state: "present"
+        volumes:
+          - vol_id: "{{ vol_id }}"
+        vol_state: "present-in-group"
+      register: sg_result
+
+    - name: Debug storage group result
+      ansible.builtin.debug:
+        var: sg_result
+
+    - name: Show success message
+      ansible.builtin.debug:
+        msg: "Successfully added volume '{{ vol_id }}' to Storage Group '{{ sg_name }}'."
+      when: sg_result is succeeded and sg_result.changed | default(false)
+
+    - name: Show no change message
+      ansible.builtin.debug:
+        msg: "Volume '{{ vol_id }}' is already part of Storage Group '{{ sg_name }}'."
+      when: sg_result is succeeded and not sg_result.changed | default(true)
+
+  rescue:
+    - name: Show failure message
+      ansible.builtin.debug:
+        msg: " Failed to add volume '{{ vol_id }}' to Storage Group '{{ sg_name }}', check logs for details."
+
+  always:
+    - name: Ensure the task completes cleanly
+      ansible.builtin.debug:
+        msg: "Volume addition process completed for Storage Group '{{ sg_name }}'."

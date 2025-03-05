@@ -1,11 +1,27 @@
-- name: List volumes of a Storage Group
-  dellemc.powermax.storagegroup:
-    unispherehost: "{{ unispherehost }}"
-    universion: "{{ universion }}"
-    verifycert: "{{ verifycert }}"
-    user: "{{ user }}"
-    password: "{{ password }}"
-    serial_no: "{{ serial_no }}"
-    sg_name: "{{ sg_name }}"
-    state: "present"
-  register: sg_result
+- name: List volumes of a Storage Group with error handling
+  block:
+    - name: List volumes of a Storage Group
+      dellemc.powermax.storagegroup:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        sg_name: "{{ sg_name }}"
+        state: "present"
+      register: sg_result
+
+    - name: Show retrieved volumes
+      ansible.builtin.debug:
+        msg: "Successfully retrieved volumes for Storage Group '{{ sg_name }}': {{ sg_result }}"
+
+  rescue:
+    - name: Handle failure
+      ansible.builtin.debug:
+        msg: "Failed to retrieve volumes for Storage Group '{{ sg_name }}'. Please check the configuration or connectivity."
+
+  always:
+    - name: Ensure the task completes cleanly
+      ansible.builtin.debug:
+        msg: "List volumes task finished, regardless of success or failure."

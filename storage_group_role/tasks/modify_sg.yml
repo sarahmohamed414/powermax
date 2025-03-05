@@ -1,0 +1,37 @@
+- name: Modify the Storage Group with Error Handling
+  block:
+    - name: Modify the Storage Group
+      dellemc.powermax.storagegroup:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        sg_name: "{{ sg_name }}"
+        state: "present"
+        service_level: "{{ service_level }}"
+        compression: false
+      register: sg_result
+
+    - name: Show Storage Group Modification Result
+      ansible.builtin.debug:
+        var: sg_result
+
+    - name: Show Message Based on Change
+      ansible.builtin.debug:
+        msg: >-
+          {% if sg_result.changed | default(false) %}
+          The service level of the Storage Group '{{ sg_name }}' has been changed to '{{ service_level }}'.
+          {% else %}
+          No changes were made. The Storage Group '{{ sg_name }}' was already set to '{{ service_level }}'.
+          {% endif %}
+
+  rescue:
+    - name: Handle Failure in Storage Group Modification
+      ansible.builtin.debug:
+        msg: "Failed to modify the Storage Group '{{ sg_name }}'. Please check the error logs."
+
+    - name: Show Detailed Error
+      ansible.builtin.debug:
+        var: sg_result

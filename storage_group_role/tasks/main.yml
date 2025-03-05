@@ -5,7 +5,9 @@
         'create_sg.yml' if user_input == '1' else
         'create_volumes_for_sg.yml' if user_input == '2' else
         'add_volumes_to_sg.yml' if user_input == '3' else
-        'list_volumes.yml'
+        'list_volumes.yml' if user_input == '4' else
+        'modify_sg.yml' if user_input == '5' else
+        'delete_sg.yml'
     }}"
 
 - name: Debug loaded variables
@@ -27,3 +29,11 @@
 - name: Include List volumes of a Storage Group
   ansible.builtin.include_tasks: list_volumes.yml
   when: user_input == "4"
+
+- name: Include Modify the Storage Group
+  ansible.builtin.include_tasks: modify_sg.yml
+  when: user_input == "5"
+
+- name: Include Delete the Storage Group
+  ansible.builtin.include_tasks: delete_sg.yml
+  when: user_input == "6"
