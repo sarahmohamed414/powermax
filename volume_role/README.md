@@ -41,11 +41,10 @@ Parameters
 Notes
 ------------
 
-Note
-
-To expand a volume, either provide vol_id or vol_name or vol_wwn and sg_name.
-size is required to create/expand a volume.
-vol_id is required to rename/delete a volume.
-vol_name, sg_name and new_sg_name is required to move volumes between storage groups.
-Deletion of volume will fail if the storage group is part of a masking view.
-The modules present in this collection named as 'dellemc.powermax' are built to support the Dell PowerMax storage platform.
+> **Note**  
+> - To expand a volume, either provide `vol_id`, `vol_name`, or `vol_wwn` along with `sg_name`.  
+> - `size` is required to create/expand a volume.  
+> - `vol_id` is required to rename/delete a volume.  
+> - `vol_name`, `sg_name`, and `new_sg_name` are required to move volumes between storage groups.  
+> - Deletion of a volume will fail if the storage group is part of a masking view.  
+> - The modules in this collection, named as `dellemc.powermax`, are built to support the Dell PowerMax storage platform.  
