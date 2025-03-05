@@ -8,8 +8,7 @@ Managing volumes on a **PowerMax storage system** includes:
 - Renaming a volume  
 - Deleting a volume  
 
-Requirements
-------------
+
 ## Requirements
 
 The following requirements must be met on the host executing this module:
@@ -19,8 +18,7 @@ The following requirements must be met on the host executing this module:
 - **Python** 3.10, 3.11, or 3.12  
 
 
-Parameters
---------------
+
 
 ## Parameters
 
@@ -45,8 +43,7 @@ Parameters
 | `port`         | No       | int     | `8443`  | The port of the Unisphere host. |
 | `serial_no`    | Yes      | string  | `None`  | The serial number of the PowerMax/VMAX array. **Required for all array-specific operations except listing arrays.** |
 
-Notes
-------------
+
 
 > **Note**  
 > - To expand a volume, either provide `vol_id`, `vol_name`, or `vol_wwn` along with `sg_name`.  
