@@ -2257,3 +2257,32 @@
 2025-03-05 10:30:27,016 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f687ae9ecf0>
 2025-03-05 10:30:27,017 volume.py INFO : Connection closed successfully
 2025-03-05 10:30:27,018 volume.py ERROR : Invalid argument new_name while creating a volume
+2025-03-05 10:47:30,776 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:54:58,921 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:55:02,007 volume.py INFO : Check Mode Flag False
+2025-03-05 10:55:02,007 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:55:02,007 volume.py INFO : Getting volume 00059 details using native id
+2025-03-05 10:55:02,394 volume.py INFO : Getting volume 00059 details using native id
+2025-03-05 10:55:02,774 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fb2542bfce0>
+2025-03-05 10:55:02,775 volume.py INFO : Connection closed successfully
+2025-03-05 10:55:54,582 volume.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:55:56,218 volume.py INFO : Check Mode Flag False
+2025-03-05 10:55:56,219 volume.py INFO : Got PyU4V instance for provisioning on to VMAX 
+2025-03-05 10:55:56,219 volume.py INFO : Getting volume 00059 details using native id
+2025-03-05 10:55:56,596 volume.py INFO : Getting volume 00059 details using native id
+2025-03-05 10:55:56,975 volume.py INFO : Closing unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7fb862b5fce0>
+2025-03-05 10:55:56,977 volume.py INFO : Connection closed successfully
+2025-03-05 10:58:42,103 storagegroup.py INFO : universion_details: {'is_valid_universion': True, 'user_message': ''}
+2025-03-05 10:58:43,700 storagegroup.py INFO : Check Mode flag is False
+2025-03-05 10:58:43,700 storagegroup.py INFO : Got PyU4V instance for provisioning on PowerMax 
+2025-03-05 10:58:43,700 storagegroup.py INFO : Getting details of storage group Aly_ga
+2025-03-05 10:58:44,431 storagegroup.py INFO : The storage group False needs to be modified and the modified param are {} 
+2025-03-05 10:58:44,431 storagegroup.py INFO : Get volumes details of storage group Aly_ga
+2025-03-05 10:58:44,432 storagegroup.py INFO : Getting volumes details of storage group Aly_ga
+2025-03-05 10:58:44,791 storagegroup.py INFO : 0 volumes present in storage group Aly_ga
+2025-03-05 10:58:44,792 storagegroup.py INFO : Getting the list of volumes from storage group Aly_ga
+2025-03-05 10:58:45,154 storagegroup.py INFO : 0 volumes present in storage group Aly_ga
+2025-03-05 10:58:45,154 storagegroup.py INFO : Found storage group {'storageGroupId': 'Aly_ga', 'slo': 'Diamond', 'service_level': 'Diamond', 'base_slo_name': 'Diamond', 'srp': 'SRP_1', 'slo_compliance': 'STABLE', 'num_of_vols': 0, 'num_of_child_sgs': 0, 'num_of_parent_sgs': 0, 'num_of_masking_views': 0, 'num_of_snapshots': 0, 'cap_gb': 0.0, 'device_emulation': 'N/A', 'type': 'Standalone', 'unprotected': True, 'compression': True, 'unreducible_data_gb': 0.0}
+2025-03-05 10:58:45,154 storagegroup.py INFO : Getting details of storage group Aly_ga
+2025-03-05 10:58:45,875 storagegroup.py INFO : Closing Unisphere connection <PyU4V.univmax_conn.U4VConn object at 0x7f6e107c3080>
+2025-03-05 10:58:45,879 storagegroup.py INFO : Connection closed successfully

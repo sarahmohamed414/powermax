@@ -1,3 +1,7 @@
-# SPDX-License-Identifier: MIT-0
----
-# defaults file for storage_group_role
+# storage_group_role/defaults/main.yml
+unispherehost: "10.118.128.103"  # IP address of the PowerMax system
+verifycert: false
+serial_no: '000297901660'
+ansible_python_interpreter: /root/pyu4v_env/bin/python3
+universion: 92
+append_vol_id: true

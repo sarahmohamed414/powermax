@@ -1,2 +1,7 @@
 ---
 # defaults file for volume_role
+unispherehost: "10.118.128.103"
+verifycert: false
+serial_no: '000297901660'
+ansible_python_interpreter: /root/pyu4v_env/bin/python3
+universion: 92

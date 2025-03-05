@@ -22,4 +22,4 @@
   always:
     - name: Debug the renamed volume details
       ansible.builtin.debug:
-        msg: "{{ 'Volume with {{ vol_id }} renamed successfully to ' ~ new_name if rename_result is not failed else ' Volume rename operation failed' }}"
+        msg: "{{ 'Volume renamed successfully to ' ~ new_name if rename_result is not failed else ' Volume rename operation failed' }}"
