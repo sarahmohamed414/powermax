@@ -52,3 +52,76 @@ The following requirements must be met on the host executing this module:
 > - `vol_name`, `sg_name`, and `new_sg_name` are required to move volumes between storage groups.  
 > - Deletion of a volume will fail if the storage group is part of a masking view.  
 > - The modules in this collection, named as `dellemc.powermax`, are built to support the Dell PowerMax storage platform.  
+# Task: Create Volume
+
+The Create Volume task ensures that a volume is created in the specified Storage Group on the PowerMax system. It also includes error handling and status reporting.
+
+## Task Breakdown
+
+### Ensure Volume Creation
+The task attempts to create a volume using the `dellemc.powermax.volume` module.
+
+### Error Handling (Rescue Block)
+If the creation fails, an error message is captured and displayed.
+
+### Status Display (Always Block)
+Provides feedback on whether the volume was created successfully, already exists, or failed.
+
+## Code Example
+
+```yaml
+- name: Ensure volume is created and handle errors
+  block:
+    - name: Create volume
+      register: result
+      dellemc.powermax.volume:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        vol_name: "{{ vol_name }}"
+        sg_name: "{{ sg_name }}"
+        size: 1
+        cap_unit: "{{ cap_unit }}"
+        append_vol_id: "{{ append_vol_id }}"
+        state: "present"
+
+  rescue:
+    - name: Capture failure reason
+      ansible.builtin.debug:
+        msg: "Failed to create volume: {{ result.msg }}"
+
+  always:
+    - name: Display volume creation status
+      ansible.builtin.debug:
+        msg: >-
+          {% if result.changed %}
+          "Volume '{{ vol_name }}' was created successfully in Storage Group '{{ sg_name }}'."
+          {% elif result.failed is defined and result.failed %}
+          "Volume creation failed: {{ result.msg }}"
+          {% else %}
+          "Volume '{{ vol_name }}' already exists in Storage Group '{{ sg_name }}'."
+          {% endif %}
+```
+
+## Variables
+
+The `vmax/volume_role/vars/create_volume.yml` file contains the necessary variables for the Create Volume task. These variables should be customized as per the requirements.
+
+### Variables in `create_volume.yml`
+
+| Variable       | Description                                      |
+|---------------|--------------------------------------------------|
+| `vol_name`    | Name of the volume to be created.               |
+| `volume_size` | Numeric size of the volume.                     |
+| `sg_name`     | Name of the Storage Group where the volume will be assigned. |
+| `cap_unit`    | Unit of measurement for the volume size (e.g., GB, MB, TB). |
+| `append_vol_id` | Whether to append a unique volume ID to the volume name (`true`/`false`). |
+
+## Usage Instructions
+
+1. Define the required variables in `vmax/volume_role/vars/create_volume.yml`.
+2. Execute the role using Ansible Playbook.
+3. Monitor the output messages to verify success or debug errors.
