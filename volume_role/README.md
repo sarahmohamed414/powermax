@@ -71,7 +71,7 @@ Provides feedback on whether the volume was created successfully, already exists
 ## Usage Instructions
 
 1. Define the required variables in `power/volume_role/vars/create_volume.yml`.
-2. Execute the role using Ansible Playbook.
+2. Execute the role using the volume_management.yml ansible playbook.
 3. Monitor the output messages to verify success or debug errors.
 
 ## Code Example
