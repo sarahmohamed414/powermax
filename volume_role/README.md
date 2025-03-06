@@ -68,6 +68,12 @@ If the creation fails, an error message is captured and displayed.
 ### Status Display (Always Block)
 Provides feedback on whether the volume was created successfully, already exists, or failed.
 
+## Usage Instructions
+
+1. Define the required variables in `power/volume_role/vars/create_volume.yml`.
+2. Execute the role using Ansible Playbook.
+3. Monitor the output messages to verify success or debug errors.
+
 ## Code Example
 
 ```yaml
@@ -235,9 +241,3 @@ Read vars_file 'vault.yml'
 PLAY RECAP **********************************************************************************************************************************************************
 localhost                  : ok=5    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0  
    
-
-### Usage Instructions
-
-1. Define the required variables in `power/volume_role/vars/create_volume.yml`.
-2. Execute the role using Ansible Playbook.
-3. Monitor the output messages to verify success or debug errors.
