@@ -240,7 +240,8 @@ Read vars_file 'vault.yml'
 
 PLAY RECAP **********************************************************************************************************************************************************
 localhost                  : ok=5    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0  
-   
+      }
+} 
 ---
 # Remove and Delete a Volume from PowerMax
 
