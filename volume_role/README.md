@@ -241,3 +241,31 @@ Read vars_file 'vault.yml'
 PLAY RECAP **********************************************************************************************************************************************************
 localhost                  : ok=5    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0  
    
+# Remove and Delete a Volume from PowerMax
+
+## Overview
+The `volume_role/tasks/delete_volume.yml` task is responsible for removing an existing volume from a specified Storage Group in a PowerMax storage system and then deleting the volume permanently.
+
+## Task Breakdown
+
+### 1. Remove the Volume from the Storage Group
+- Ensures the volume (`vol_id`) is detached from the storage group (`sg_name`).
+- Uses the `vol_state: "absent-in-group"` parameter.
+
+### 2. Delete the Volume
+- Once the volume is removed from the storage group, it is deleted from the PowerMax system using `state: "absent"`.
+- This action permanently removes the volume from the system.
+
+## Variables
+The `volume_role/vars/delete_volume.yml` file contains the necessary variables for the `delete_volume` task. These variables should be customized as per requirements.
+
+| Variable  | Description |
+|-----------|-------------|
+| vol_id    | ID of the volume to be deleted. |
+| sg_name   | Name of the Storage Group from which the volume should be removed. |
+
+## Validation Criteria
+Before executing the task, ensure the following conditions are met:
+- The Storage Group (`sg_name`) exists before attempting removal.
+- The Volume (`vol_id`) exists before removal and deletion.
+
