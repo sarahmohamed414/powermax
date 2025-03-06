@@ -108,9 +108,9 @@ Provides feedback on whether the volume was created successfully, already exists
 
 ## Variables
 
-The `vmax/volume_role/vars/create_volume.yml` file contains the necessary variables for the Create Volume task. These variables should be customized as per the requirements.
+The `powermax/volume_role/vars/create_volume.yml` file contains the necessary variables for the Create Volume task. These variables should be customized as per the requirements.
 
-### Variables in `create_volume.yml`
+### Variables in `powermax/volume_role/vars/create_volume.yml`
 
 | Variable       | Description                                      |
 |---------------|--------------------------------------------------|
@@ -120,8 +120,122 @@ The `vmax/volume_role/vars/create_volume.yml` file contains the necessary variab
 | `cap_unit`    | Unit of measurement for the volume size (e.g., GB, MB, TB). |
 | `append_vol_id` | Whether to append a unique volume ID to the volume name (`true`/`false`). |
 
+
+### vars/create_volume.yml Example
+```yaml
+vol_name: "Test_volume" # Please enter the name of the volume to be created.
+volume_size: 1 # Please enter the size of the volume (numeric value).
+sg_name: "Edward_LNK_SG_001" # Please enter the name of the storage group where the volume will be assigned.
+cap_unit: 'GB' # Please enter the unit of measurement for the volume size.
+append_vol_id: true # Whether to append a unique volume ID to the volume name (true/false).
+```
+
+---
+
+## Example Output
+```bash
+included: /root/ansible-powermax/volume_role/tasks/create_volume.yml for localhost
+Read vars_file 'vault.yml'
+
+TASK [volume_role : Create volume] **********************************************************************************************************************************
+task path: /root/ansible-powermax/volume_role/tasks/create_volume.yml:3
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+<127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1741257185.5820274-4054-233184259503660 `" && echo ansible-tmp-1741257185.5820274-4054-233184259503660="` echo /root/.ansible/tmp/ansible-tmp-1741257185.5820274-4054-233184259503660 `" ) && sleep 0'
+Using module file /root/.ansible/collections/ansible_collections/dellemc/powermax/plugins/modules/volume.py
+<127.0.0.1> PUT /root/.ansible/tmp/ansible-local-4013toqanfiy/tmpe3d7uar5 TO /root/.ansible/tmp/ansible-tmp-1741257185.5820274-4054-233184259503660/AnsiballZ_volume.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1741257185.5820274-4054-233184259503660/ /root/.ansible/tmp/ansible-tmp-1741257185.5820274-4054-233184259503660/AnsiballZ_volume.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/root/pyu4v_env/bin/python3 /root/.ansible/tmp/ansible-tmp-1741257185.5820274-4054-233184259503660/AnsiballZ_volume.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1741257185.5820274-4054-233184259503660/ > /dev/null 2>&1 && sleep 0'
+changed: [localhost] => {
+    "changed": true,
+    "invocation": {
+        "module_args": {
+            "append_vol_id": true,
+            "cap_unit": "GB",
+            "new_name": null,
+            "new_sg_name": null,
+            "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+            "port": 8443,
+            "serial_no": "000297901660",
+            "sg_name": "Edward_LNK_SG_001",
+            "size": 1.0,
+            "state": "present",
+            "timeout": 120,
+            "unispherehost": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+            "universion": 92,
+            "user": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+            "verifycert": "False",
+            "vol_id": null,
+            "vol_name": "Test_volume",
+            "vol_wwn": null
+        }
+    },
+    "volume_details": {
+        "allocated_percent": 0,
+        "cap_cyl": 547,
+        "cap_gb": 1.0,
+        "cap_mb": 1026.0,
+        "effective_wwn": "60000970000297901660533030303644",
+        "emulation": "FBA",
+        "encapsulated": false,
+        "has_effective_wwn": false,
+        "mobility_id_enabled": false,
+        "num_of_front_end_paths": 0,
+        "num_of_storage_groups": 1,
+        "pinned": false,
+        "reserved": false,
+        "snapvx_source": false,
+        "snapvx_target": false,
+        "ssid": "FFFFFFFF",
+        "status": "Ready",
+        "storageGroupId": [
+            "Edward_LNK_SG_001"
+        ],
+        "storage_groups": [
+            {
+                "storage_group_name": "Edward_LNK_SG_001"
+            }
+        ],
+        "type": "TDEV",
+        "unreducible_data_gb": 0.0,
+        "volumeId": "0006D",
+        "volume_identifier": "Test_volume",
+        "wwn": "60000970000297901660533030303644"
+    }
+}
+Read vars_file 'vault.yml'
+
+TASK [volume_role : Display volume creation status] *****************************************************************************************************************
+task path: /root/ansible-powermax/volume_role/tasks/create_volume.yml:25
+ok: [localhost] => {
+    "msg": " \"Volume 'Test_volume' was created successfully in Storage Group 'Edward_LNK_SG_001'.\" "
+}
+Read vars_file 'vault.yml'
+
+TASK [volume_role : Include Rename volume] **************************************************************************************************************************
+task path: /root/ansible-powermax/volume_role/tasks/main.yml:18
+skipping: [localhost] => {
+    "changed": false,
+    "false_condition": "user_input == \"2\"",
+    "skip_reason": "Conditional result was False"
+}
+Read vars_file 'vault.yml'
+
+TASK [volume_role : Include Delete volume] **************************************************************************************************************************
+task path: /root/ansible-powermax/volume_role/tasks/main.yml:22
+skipping: [localhost] => {
+    "changed": false,
+    "false_condition": "user_input == \"3\"",
+    "skip_reason": "Conditional result was False"
+}
+Read vars_file 'vault.yml'
+
+PLAY RECAP **********************************************************************************************************************************************************
+localhost                  : ok=5    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0  
+   
 ## Usage Instructions
 
-1. Define the required variables in `vmax/volume_role/vars/create_volume.yml`.
+1. Define the required variables in `power/volume_role/vars/create_volume.yml`.
 2. Execute the role using Ansible Playbook.
 3. Monitor the output messages to verify success or debug errors.
