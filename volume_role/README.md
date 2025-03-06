@@ -47,11 +47,12 @@ The following requirements must be met on the host executing this module:
 
 > **Note**  
 > - To expand a volume, either provide `vol_id`, `vol_name`, or `vol_wwn` along with `sg_name`.  
-> - `size` is required to create/expand a volume.  
+> - `size` is required to create/expand a volume and it should be a positive integer..  
 > - `vol_id` is required to rename/delete a volume.  
-> - `vol_name`, `sg_name`, and `new_sg_name` are required to move volumes between storage groups.  
 > - Deletion of a volume will fail if the storage group is part of a masking view.  
-> - The modules in this collection, named as `dellemc.powermax`, are built to support the Dell PowerMax storage platform.  
+> - The modules in this collection, named as `dellemc.powermax`, are built to support the Dell PowerMax storage platform.
+> - The specified Storage Group (sg_name) must exist before attempting to create the volume.
+> - cap_unit should be one of the valid values (MB, GB, TB).
 # Task: Create Volume
 
 The Create Volume task ensures that a volume is created in the specified Storage Group on the PowerMax system. It also includes error handling and status reporting.
