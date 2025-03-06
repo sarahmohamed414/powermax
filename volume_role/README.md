@@ -235,7 +235,8 @@ Read vars_file 'vault.yml'
 PLAY RECAP **********************************************************************************************************************************************************
 localhost                  : ok=5    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0  
    
-## Usage Instructions
+
+### Usage Instructions
 
 1. Define the required variables in `power/volume_role/vars/create_volume.yml`.
 2. Execute the role using Ansible Playbook.
