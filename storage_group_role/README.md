@@ -20,94 +20,35 @@ The following requirements must be met on the host executing this module:
 
 Parameters  
 --------------
+| Parameter                | Required | Type  | Default | Description |
+|--------------------------|----------|------|---------|-------------|
+| `sg_name`               | Yes      | str  | None    | The name of the storage group. |
+| `service_level`         | No       | str  | None    | The name of SLO. |
+| `srp`                   | No       | str  | None    | The name of the storage resource pool. Ignored if `service_level` is not specified. Default is the array's default SRP. |
+| `compression`           | No       | bool | None    | Compression on the storage group. Ignored if `service_level` is not specified. Default is `true`. |
+| `volumes`               | No       | list | None    | A list of volumes. Each volume has attributes: `vol_name`, `size`, `cap_unit`, `vol_id`. `vol_id` is required for existing volumes. `size` is required for new volumes. `cap_unit` defaults to `GB` (Choices: MB, GB, TB). |
+| `vol_state`             | No       | str  | None    | Describes the state of volumes inside the storage group. |
+| `child_storage_groups`  | No       | list | None    | A list of child storage groups. |
+| `child_sg_state`        | No       | str  | None    | Describes the state of child storage groups inside the parent SG. |
+| `new_sg_name`          | No       | str  | None    | The new name of the storage group. |
+| `target_sg_name`       | No       | str  | None    | The destination storage group name to move the volumes to. |
+| `force`                | No       | bool | None    | Set to `True` when moving volumes to `target_sg_name` if they are in a masking view. |
+| `snapshot_policies`    | No       | list | None    | A list of snapshot policies. |
+| `snapshot_policy_state` | No       | str  | None    | Describes the state of the snapshot policy for a storage group. |
+| `host_io_limit`        | No       | dict | None    | Host I/O limit of the storage group. |
+| `host_io_limit_iops`   | No       | int  | None    | The I/Os per second host I/O limit for the storage group. |
+| `dynamic_distribution` | No       | str  | Never   | The dynamic distribution of host I/O limit for the storage group. |
+| `host_io_limit_mbps`   | No       | int  | None    | The MBs per second host I/O limit for the storage group. |
+| `state`               | Yes      | str  | None    | Defines whether the storage group should exist or not. |
+| `unispherehost`       | Yes      | str  | None    | IP or FQDN of the Unisphere host. |
+| `universion`         | No       | int  | None    | Unisphere version (Deprecated, no longer necessary). |
+| `verifycert`         | Yes      | str  | None    | Specifies whether to validate the SSL certificate. Accepts `True`, `False`, or a file path (.pem/.cer). |
+| `user`               | Yes      | str  | None    | The username of the Unisphere host. |
+| `password`           | Yes      | str  | None    | The password of the Unisphere host. |
+| `timeout`           | No       | int  | 120     | The time (in seconds) before the connection is terminated. |
+| `port`              | No       | int  | 8443    | The port of the Unisphere host. |
+| `serial_no`         | Yes      | str  | None    | The serial number of the PowerMax/VMAX array. Required for all array-specific operations except retrieving arrays in the Gatherfacts module. |
 
-- **sg_name** *(True, str, None)*  
-  The name of the storage group.  
-
-- **service_level** *(optional, str, None)*  
-  The name of SLO.  
-
-- **srp** *(optional, str, None)*  
-  The name of the storage resource pool.  
-  - This parameter is ignored if `service_level` is not specified.  
-  - Default is to use whichever is the default SRP on the array.  
-
-- **compression** *(optional, bool, None)*  
-  Compression on the storage group.  
-  - This parameter is ignored if `service_level` is not specified.  
-  - Default is `true`.  
-
-- **volumes** *(optional, list, None)*  
-  This is a list of volumes.  
-  - Each volume has four attributes: `vol_name`, `size`, `cap_unit`, `vol_id`.  
-  - `vol_id` must be provided for existing volumes.  
-  - `size` must be provided to add new volumes to SG.  
-  - `cap_unit` is optional. Default is `GB` (Choices: `MB`, `GB`, `TB`).  
-
-- **vol_state** *(optional, str, None)*  
-  Describes the state of volumes inside the storage group.  
-
-- **child_storage_groups** *(optional, list, None)*  
-  A list of child storage groups.  
-
-- **child_sg_state** *(optional, str, None)*  
-  Describes the state of child storage groups inside the parent SG.  
-
-- **new_sg_name** *(optional, str, None)*  
-  The new name of the storage group.  
-
-- **target_sg_name** *(optional, str, None)*  
-  The destination storage group name to move the volumes to.  
-
-- **force** *(optional, bool, None)*  
-  This flag must be set to `True` while moving volumes to the target SG if the volume is in a masking view.  
-
-- **snapshot_policies** *(optional, list, None)*  
-  A list of snapshot policies.  
-
-- **snapshot_policy_state** *(optional, str, None)*  
-  Describes the state of the snapshot policy for a storage group.  
-
-- **host_io_limit** *(optional, dict, None)*  
-  Host I/O limit of the storage group.  
-
-  - **host_io_limit_iops** *(optional, int, None)*  
-    The I/Os per second host I/O limit for the storage group.  
-
-  - **dynamic_distribution** *(optional, str, Never)*  
-    The dynamic distribution of host I/O limit for the storage group.  
-
-  - **host_io_limit_mbps** *(optional, int, None)*  
-    The MBs per second host I/O limit for the storage group.  
-
-- **state** *(True, str, None)*  
-  Defines whether the storage group should exist or not.  
-
-- **unispherehost** *(True, str, None)*  
-  IP or FQDN of the Unisphere host.  
-
-- **universion** *(False, int, None)*  
-  Unisphere version. *(Deprecated: No longer necessary to specify this parameter.)*  
-
-- **verifycert** *(True, str, None)*  
-  Specifies whether to validate the SSL certificate.  
-  - Accepts `True`, `False`, or a custom file path for SSL certificate (`.pem` or `.cer`).  
-
-- **user** *(True, str, None)*  
-  The username of the Unisphere host.  
-
-- **password** *(True, str, None)*  
-  The password of the Unisphere host.  
-
-- **timeout** *(optional, int, 120)*  
-  The time (in seconds) after which the connection will be terminated.  
-
-- **port** *(optional, int, 8443)*  
-  The port of the Unisphere host.  
-
-- **serial_no** *(True, str, None)*  
-  The serial number of the PowerMax/VMAX array.  
-  - Required for all array-specific operations, except for retrieving a list of arrays in the Gatherfacts module.  
 
 ## Notes  
 
@@ -116,10 +57,10 @@ Parameters
 - The **check_mode** is not supported.  
 - The modules in this collection, named **`dellemc.powermax`**, are built to support the **Dell PowerMax storage platform**.
 
-# Create a New Storage Group with Error Handling
+# Create a storage group 
 
 ## Task Overview
-The **Create a New Storage Group** task ensures that a Storage Group is created in the PowerMax system with the specified Service Level and Storage Resource Pool (SRP). The task includes error handling and status reporting to ensure smooth execution.
+The **Create a storage group ** task ensures that a Storage Group is created in the PowerMax system with the specified Service Level and Storage Resource Pool (SRP). The task includes error handling and status reporting to ensure smooth execution.
 
 ## Task Breakdown
 ### Creating a Storage Group
