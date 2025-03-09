@@ -204,3 +204,117 @@ The `powermax/storage_group_role/vars/create_volumes_for_sg.yml` file contains t
 To ensure successful execution, verify the following:
 - The `sg_name` variable points to an existing Storage Group in the PowerMax system.
 - The `size` variable is a valid integer value greater than zero.
+
+# Task: Add Existing Volumes to an Existing Storage Group
+
+## Overview
+storage_group_role/tasks/add_volumes_to_sg.yml This task adds an existing volume to a specified Storage Group in the PowerMax system. It includes error handling and status reporting to ensure smooth execution.
+
+## Task Breakdown
+1. **Adding Volumes to the Storage Group**
+   - Utilizes the `dellemc.powermax.storagegroup` module to add an existing volume to the specified Storage Group.
+   - Specifies the volume ID of the existing volume to be added.
+
+2. **Error Handling (Rescue Block)**
+   - Captures and displays an error message if the addition fails.
+
+3. **Status Display (Always Block)**
+   - Provides feedback on whether the volume was successfully added, was already part of the Storage Group, or encountered an issue.
+
+## Usage Instructions
+1. Define the required variables in `powermax/storage_group_role/vars/add_volumes_to_sg.yml`.
+2. Execute the role using the `storage_management.yml` Ansible playbook.
+3. Monitor the output messages to verify success or debug errors.
+
+## Variables
+The `powermax/storage_group_role/vars/add_volumes_to_sg.yml` file contains the necessary variables for this task. Customize these variables as needed.
+
+### Variables in `powermax/storage_group_role/vars/add_volumes_to_sg.yml`
+| Variable  | Description |
+|-----------|------------|
+| `sg_name` | Name of the Storage Group to which the existing volume will be added. |
+| `vol_id`  | ID of the existing volume to be added to the Storage Group. |
+
+# Task: List Volumes of a Storage Group
+
+## Overview
+storage_group_role/tasks/list_volumes.yml, This task retrieves the list of volumes from a specified Storage Group in the PowerMax system. It includes error handling and status reporting to ensure smooth execution.
+
+## Task Breakdown
+### Retrieving Volumes from the Storage Group
+- Uses the `dellemc.powermax.storagegroup` module to fetch the list of volumes from a specified Storage Group.
+
+### Error Handling (Rescue Block)
+- Captures and displays an error message if the retrieval fails.
+
+### Status Display (Always Block)
+- Provides feedback on whether the retrieval was successful or encountered an issue.
+
+## Usage Instructions
+1. Define the required variables in `powermax/storage_group_role/vars/list_volumes.yml`.
+2. Execute the role using the `storage_management.yml` Ansible playbook.
+3. Monitor the output messages to verify success or debug errors.
+
+## Variables
+The `powermax/storage_group_role/vars/list_volumes.yml` file contains the necessary variables for this task. Customize these variables as needed.
+
+### Variables in `powermax/storage_group_role/vars/list_volumes.yml`
+
+| Variable  | Description |
+|-----------|-------------|
+| `sg_name` | Name of the Storage Group to list its volumes. |
+
+# Task: Modify Storage Group
+
+## Overview
+storage_group_role/tasks/modify_sg.yml,This task modifies an existing Storage Group in the PowerMax system by changing its service level. It includes error handling and status reporting to ensure smooth execution.
+
+## Task Breakdown
+### Modifying the Storage Group
+- Uses the `dellemc.powermax.storagegroup` module to update the service level of the specified Storage Group.
+- Ensures compression is disabled.
+
+### Error Handling (Rescue Block)
+- Captures and displays an error message if the modification fails.
+
+### Status Display
+- Provides feedback on whether the service level was successfully modified or if no changes were needed.
+
+## Usage Instructions
+1. Define the required variables in `powermax/storage_group_role/vars/modify_sg.yml`.
+2. Execute the role using the `storage_management.yml` Ansible playbook.
+3. Monitor the output messages to verify success or debug errors.
+
+## Variables
+The `powermax/storage_group_role/vars/modify_sg.yml` file contains the necessary variables for this task. Customize these variables as needed.
+
+### Variables in `powermax/storage_group_role/vars/modify_sg.yml`
+
+| Variable       | Description |
+|---------------|-------------|
+| `sg_name`     | Name of the Storage Group to modify. |
+| `service_level` | Desired service level (Choose from: Diamond, Platinum, Gold, Silver, Bronze). |
+
+# Task: Delete Storage Group
+
+## Overview
+storage_group_role/tasks/delete_sg.yml, This task deletes an existing Storage Group in the PowerMax system. It includes error handling and status reporting to ensure a smooth deletion process.
+
+## Task Breakdown
+### Deleting the Storage Group
+- Uses the `dellemc.powermax.storagegroup` module to remove the specified Storage Group.
+- Ensures the operation fails safely if the Storage Group does not exist.
+
+## Usage Instructions
+1. Define the required variables in `powermax/storage_group_role/vars/delete_sg.yml`.
+2. Execute the role using the `storage_management.yml` Ansible playbook.
+3. Monitor the output messages to verify success or debug errors.
+
+## Variables
+The `powermax/storage_group_role/vars/delete_sg.yml` file contains the necessary variables for this task. Customize these variables as needed.
+
+### Variables in `powermax/storage_group_role/vars/delete_sg.yml`
+
+| Variable   | Description |
+|------------|-------------|
+| `sg_name`  | Name of the Storage Group to delete. |
