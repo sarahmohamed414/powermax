@@ -171,3 +171,36 @@ task path: /root/ansible-powermax/storage_group_role/tasks/create_sg.yml:22
 ok: [localhost] => {
     "msg": "Successfully created Storage Group 'SG_test' with Service
 
+# Create New Volumes, Then Add Them to an Existing Storage Group
+
+## Task Overview
+The **Create New Volumes for Existing Storage Group** task ensures that a new volume is created and added to a specified storage group on the PowerMax system. The process includes error handling and status reporting.
+
+## Task Breakdown
+### Volume Creation
+This task creates a new volume and assigns it to an existing storage group using the `dellemc.powermax.storagegroup` module.
+
+### Status Reporting
+- If the volume is successfully created and added, a confirmation message is displayed.
+- If the operation fails, an error message is captured and displayed.
+
+## Usage Instructions
+1. Define the required variables in `storage_group_role/vars/create_volumes_for_sg.yml`.
+2. Execute the role using the `storage_management.yml` Ansible playbook.
+3. Monitor the output messages to verify success or troubleshoot errors.
+
+## Variables
+The `powermax/storage_group_role/vars/create_volumes_for_sg.yml` file contains the necessary variables for the task. These variables should be customized as per requirements.
+
+### Variables in `powermax/storage_group_role/vars/create_volumes_for_sg.yml`
+
+| Variable  | Description  |
+|-----------|--------------|
+| `sg_name`  | Name of the existing storage group where the new volume will be created.  |
+| `vol_name`  | Name of the volume to be created.  |
+| `size`  | Numeric size of the volume in GB.  |
+
+## Validation Criteria
+To ensure successful execution, verify the following:
+- The `sg_name` variable points to an existing Storage Group in the PowerMax system.
+- The `size` variable is a valid integer value greater than zero.
