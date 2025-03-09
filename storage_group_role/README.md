@@ -318,3 +318,40 @@ The `powermax/storage_group_role/vars/delete_sg.yml` file contains the necessary
 | Variable   | Description |
 |------------|-------------|
 | `sg_name`  | Name of the Storage Group to delete. |
+
+# Task: Create Child Storage Group
+
+## Overview
+storage_group_role/tasks/create_child_sg.yml, This task creates a new child Storage Group and assigns it to a parent Storage Group in the PowerMax system. It includes error handling and status reporting to ensure a smooth execution process.
+
+## Task Breakdown
+### Creating the Child Storage Group
+- Uses the `dellemc.powermax.storagegroup` module to create a new child Storage Group.
+- Defines storage settings such as service level, storage resource pool (SRP), and compression.
+
+### Assigning the Child Storage Group to the Parent
+- Assigns the newly created child Storage Group to a specified parent Storage Group.
+
+### Error Handling (Rescue Block)
+- Captures and displays an error message if the creation or assignment fails.
+
+### Status Display (Always Block)
+- Shows detailed debugging information for troubleshooting.
+
+## Usage Instructions
+1. Define the required variables in `powermax/storage_group_role/vars/create_child_sg.yml`.
+2. Execute the role using the `storage_management.yml` Ansible playbook.
+3. Monitor the output messages to verify success or debug errors.
+
+## Variables
+The `powermax/storage_group_role/vars/create_child_sg.yml` file contains the necessary variables for this task. Customize these variables as needed.
+
+### Variables in `powermax/storage_group_role/vars/create_and_assign_child_sg.yml`
+
+| Variable        | Description |
+|----------------|-------------|
+| `child_sg_name` | Name of the child Storage Group to be created. |
+| `parent_sg_name` | Name of the parent Storage Group. |
+| `srp`          | Storage Resource Pool (SRP) to allocate resources. |
+| `service_level` | Service level for the Storage Group (e.g., Diamond, Platinum, Gold). |
+| `compression`  | Enable or disable compression (`true`/`false`). |
