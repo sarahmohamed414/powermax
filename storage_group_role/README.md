@@ -170,7 +170,7 @@ TASK [storage_group_role : Show success message] *******************************
 task path: /root/ansible-powermax/storage_group_role/tasks/create_sg.yml:22
 ok: [localhost] => {
     "msg": "Successfully created Storage Group 'SG_test' with Service
-
+'''
 # Create New Volumes, Then Add Them to an Existing Storage Group
 
 ## Task Overview
