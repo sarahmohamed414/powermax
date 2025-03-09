@@ -1,0 +1,48 @@
+- name: Create a new child Storage Group and assign it to a parent SG with error handling
+  block:
+    - name: Create a new child Storage Group
+      dellemc.powermax.storagegroup:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        sg_name: "{{ child_sg_name }}"
+        srp: "{{ srp }}"
+        service_level: "{{ service_level }}"
+        compression: "{{ compression }}"
+        state: "present"
+      register: sg_result
+
+    - name: Assign child Storage Group to parent
+      dellemc.powermax.storagegroup:
+        unispherehost: "{{ unispherehost }}"
+        universion: "{{ universion }}"
+        verifycert: "{{ verifycert }}"
+        user: "{{ user }}"
+        password: "{{ password }}"
+        serial_no: "{{ serial_no }}"
+        sg_name: "{{ parent_sg_name }}"
+        child_storage_groups:
+          - "{{ child_sg_name }}"
+        child_sg_state: "present-in-group"
+        state: "present"
+      register: assign_result
+
+    - name: Display success message
+      debug:
+        msg: "Child Storage Group '{{ child_sg_name }}' has been successfully created and assigned to Parent Storage Group '{{ parent_sg_name }}'."
+      when: sg_result.changed or assign_result.changed
+
+  rescue:
+    - name: Handle failure in creating or assigning Storage Group
+      debug:
+        msg: "Failed to create or assign Storage Group '{{ child_sg_name }}' to Parent '{{ parent_sg_name }}'."
+
+  always:
+    - name: Debug Storage Group creation and assignment result
+      debug:
+        var: sg_result
+    - debug:
+        var: assign_result

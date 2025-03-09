@@ -1,0 +1,7 @@
+# Storage Group details
+child_sg_name: "sara_child1"  # Please enter the name of the child Storage Group that you want to create
+parent_sg_name: "Aly_g" # Please enter the name of the parent Storage Group
+# Storage settings
+srp: "SRP_1"  # Please enter the Storage Resource Pool (SRP)
+service_level: "Diamond"  # Please enter the service level. Options: Diamond, Platinum, Gold, etc.
+compression: false  # Enable or disable compression (true/false)
