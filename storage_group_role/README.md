@@ -60,7 +60,7 @@ Parameters
 # Create a storage group 
 
 ## Task Overview
-The **Create a storage group ** task ensures that a Storage Group is created in the PowerMax system with the specified Service Level and Storage Resource Pool (SRP). The task includes error handling and status reporting to ensure smooth execution.
+The Create a storage group task "storage_group_role/tasks/create_sg.yml" ensures that a Storage Group is created in the PowerMax system with the specified Service Level and Storage Resource Pool (SRP). The task includes error handling and status reporting to ensure smooth execution.
 
 ## Task Breakdown
 ### Creating a Storage Group
@@ -174,7 +174,7 @@ ok: [localhost] => {
 # Create New Volumes, Then Add Them to an Existing Storage Group
 
 ## Task Overview
-The **Create New Volumes for Existing Storage Group** task ensures that a new volume is created and added to a specified storage group on the PowerMax system. The process includes error handling and status reporting.
+The **Create New Volumes for Existing Storage Group** task "storage_group_role/tasks/create_volumes_for_sg.yml" ensures that a new volume is created and added to a specified storage group on the PowerMax system. The process includes error handling and status reporting.
 
 ## Task Breakdown
 ### Volume Creation
