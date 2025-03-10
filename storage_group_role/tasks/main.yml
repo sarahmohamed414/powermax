@@ -7,7 +7,7 @@
         'add_volumes_to_sg.yml' if user_input == '3' else
         'list_volumes.yml' if user_input == '4' else
         'modify_sg.yml' if user_input == '5' else
-        'delete_sg.yml if user_input == '6' else
+        'delete_sg.yml' if user_input == '6' else
         'create_child_sg.yml'
     }}"
 
