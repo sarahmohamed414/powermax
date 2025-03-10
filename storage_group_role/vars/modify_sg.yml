@@ -1,2 +1,2 @@
-sg_name: "sa"  # Enter the name of the Storage Group to modify.
+sg_name: "Test_SG"  # Enter the name of the Storage Group to modify.
 service_level: "Diamond"  # Choose a service level: {Diamond, Platinum, Gold, Silver, Bronze}.

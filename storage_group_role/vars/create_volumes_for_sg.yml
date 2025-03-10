@@ -1,3 +1,3 @@
 sg_name: "Edward_LNK_SG_001"   # Enter the name of the existing storage group where new volumes will be created.
-vol_name: "sara_new_volume" # Enter the name of the volume to be created.
+vol_name: "Test_new_volume" # Enter the name of the volume to be created.
 size: 1
